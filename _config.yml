@@ -4,12 +4,13 @@ description: "KyungHee University, Vision and Learning Lab | Computer Vision Res
 
 # Navigation Menu Order
 header_pages:
-  - index.md
-  - publications.md
-  - projects.md
-  - cv.md
-  - contact.md
-  - news.md
+[]
+  # - index.md
+  # - publications.md
+  # - projects.md
+  # - cv.md
+  # - contact.md
+  # - news.md
 
 # Minima Theme Customization
 minima:
