@@ -3,7 +3,7 @@ layout: default
 title: Research Homepage
 ---
 
-<style>
+<!-- <style>
 /* Fixed Navigation Bar */
 .navbar {
     position: fixed;
@@ -30,7 +30,7 @@ title: Research Homepage
     max-width: 800px;
     margin: auto;
 }
-</style>
+</style> -->
 
 <!-- Navigation Bar -->
 <div class="navbar">
@@ -137,7 +137,9 @@ I am always open to **collaborations and discussions** in computer vision, multi
 - **Conference**: Korean Institute of Information Scientists and Engineers (KIISE), 2024
 - [Paper Link](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11862452)
 - **Abstract**: This paper presents BAVCA, an innovative audio-video cross-attention model for human action recognition. Unlike traditional models that rely only on visual information, BAVCA effectively integrates auditory cues to enhance recognition accuracy. The model outperforms existing state-of-the-art approaches by leveraging modality interactions.
+
 ---
+
 
 
 <!-- ## 🛠️ Research Projects {#projects}
