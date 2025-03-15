@@ -2,13 +2,13 @@ theme: minima
 title: "Research Homepage | Jongseo Lee"
 description: "KyungHee University, Vision and Learning Lab | Computer Vision Researcher"
 
-# Navigation Menu Order
+# Remove built-in menu since we are using a custom one
 header_pages: []
 
-# Minima Theme Customization
+# Social Links (Optional)
 minima:
   skin: classic
   social_links:
-    github: https://github.com/jong980812
-    linkedin: https://www.linkedin.com/in/jongseo-lee-a551ab244/
-    email: jong980812@khu.ac.kr
+    github: jong980812
+    linkedin: jongseo-lee
+    email: your-email@example.com
