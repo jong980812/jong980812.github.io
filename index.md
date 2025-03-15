@@ -1,30 +1,3 @@
-<!-- ---
-layout: home
-title: Research Homepage
----
-
-# Research Homepage | Jongseo Lee  
-🎓 **[KyungHee University](https://www.khu.ac.kr/eng/user/main/view.do)**  
-🔬 **[Vision and Learning Lab](https://vll.khu.ac.kr/pub.html)**  
-💻 **Computer Vision Researcher (M.S. Student)**  
-
----
-
-## 📚 Research Interests  
-- 🔍 Computer Vision  
-- 🤖 Deep Learning & AI  
-- 🎯 Object Detection & Segmentation  
-
----
-
-## 🔗 Quick Links  
-📄 [Publications](/publications)  
-🛠️ [Research Projects](/projects)  
-📑 [Curriculum Vitae (CV)](/cv)  
-✉️ [Contact](/contact)  
-📰 [News](/news)  
-
-
 ---
 layout: home
 title: Research Homepage
@@ -134,4 +107,4 @@ html {
 
 ## 📅 January 2024  
 - 📝 Started a new research project!  
-</div> -->
+</div>

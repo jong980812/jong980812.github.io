@@ -3,14 +3,7 @@ title: "Research Homepage | Jongseo Lee"
 description: "KyungHee University, Vision and Learning Lab | Computer Vision Researcher"
 
 # Navigation Menu Order
-header_pages:
-[]
-  # - index.md
-  # - publications.md
-  # - projects.md
-  # - cv.md
-  # - contact.md
-  # - news.md
+header_pages: []
 
 # Minima Theme Customization
 minima:
