@@ -119,18 +119,26 @@ I am always open to **collaborations and discussions** in computer vision, multi
 #### PCEvE: Part Contribution Evaluation Based Model Explanation for Human Figure Drawing Assessment and Beyond**  
 - **Authors:** **Jongseo Lee**, Geo Ahn, Seong Tae Kim, Jinwoo Choi  
 - **Preprint:** arXiv 2024 (under review)  
-- **Paper Link:** [arXiv:2409.18260](https://arxiv.org/abs/2409.18260)  
+- [Paper Link](https://arxiv.org/abs/2409.18260)  
 - **Abstract:** PCEvE is a novel explainable AI framework for human figure drawing assessment. It utilizes part-based Shapley Value evaluation to provide more interpretable and class-level model explanations. The method is validated across multiple datasets and extends beyond human figure analysis to real-world datasets like Stanford Cars.  
 
 ---
 
 #### Efficient Video Class Incremental Learning via Class Token Re-Learning**  
-- **Authors:** Suhyun Park, **Jongseo Lee**, Jinwoo Choi  
+- **Authors:**  **Jongseo Lee**, Suhyun Park, Jinwoo Choi  
 - **Conference:** Korean Institute of Information Scientists and Engineers (KIISE), 2024  
-- **Paper Link:** [DBpia](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11862420)  
-- **Abstract:** This paper introduces a class token-based re-learning approach for efficient video class incremental learning, aiming to improve model adaptability to new classes while maintaining old knowledge.  
+- [Paper Link](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11862420)  
+- **Abstract:** This paper introduces a class token-based re-learning approach for efficient video class incremental learning, aiming to improve model adaptability to new classes while maintaining old knowledge. 
 
 ---
+
+ #### Audio-Video Cross Attention for Effective Video Action Recognition
+-	**Authors**:  **Jongseo Lee**, Jang Juhyeon, Jinwoo Choi
+- **Conference**: Korean Institute of Information Scientists and Engineers (KIISE), 2024
+- [Paper Link](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11862452)
+- **Abstract**: This paper presents BAVCA, an innovative audio-video cross-attention model for human action recognition. Unlike traditional models that rely only on visual information, BAVCA effectively integrates auditory cues to enhance recognition accuracy. The model outperforms existing state-of-the-art approaches by leveraging modality interactions.
+---
+
 
 <!-- ## 🛠️ Research Projects {#projects}
 ### Project 1: **Project Title**  
