@@ -11,6 +11,47 @@ h1, h2, h3 {
     font-weight: 600;
     color: #003366; /* 네이비 블루 */
 }
+/* About Me 컨테이너 */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* 사진과 약력 간 간격 */
+    margin-bottom: 20px;
+}
+
+/* 프로필 사진 스타일 */
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* 원형 이미지 */
+    object-fit: cover;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 약력(Bio) 스타일 */
+.bio-info {
+    text-align: left;
+}
+
+.bio-info h3 {
+    margin: 5px 0;
+    font-size: 22px;
+    color: #003366;
+}
+
+.bio-info p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #444;
+}
+
+/* 소개 (Research Interests) 스타일 */
+.about-description {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 /* 맨 위 헤더 스타일 */
 .site-header {
     text-align: center;
