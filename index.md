@@ -3,44 +3,7 @@ layout: default
 title: Research Homepage
 ---
 
-<!-- <style>
-/* Fixed Navigation Bar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #003366;
-    padding: 10px 0;
-    z-index: 1000;
-    text-align: center;
-}
-.navbar a {
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-.navbar a:hover {
-    background: #00509E;
-}
 
-/* Section Styles */
-.section {
-    padding: 80px 20px;
-    max-width: 800px;
-    margin: auto;
-}
-</style> -->
-
-<!-- Navigation Bar -->
-<div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#publications">Publications</a>
-    <a href="#projects">Projects</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
-    <a href="#news">News</a>
-</div>
 
 # Research Homepage | Jongseo Lee  
 🎓 **[KyungHee University](https://www.khu.ac.kr/eng/user/main/view.do)**  
@@ -90,10 +53,18 @@ I am always open to **collaborations and discussions** in computer vision, multi
 <a href="https://github.com/jong980812" target="_blank" style="text-decoration: none;">
     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30" style="vertical-align: middle;"> GitHub
 </a>  
+
 <br>
 <a href="https://www.linkedin.com/in/jongseo-lee-a551ab244/" target="_blank" style="text-decoration: none;">
     <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="30" style="vertical-align: middle;"> LinkedIn
-</a>  
+</a>
+
+<br>
+
+---
+
+<br>
+<br>
 
 
 
@@ -132,7 +103,7 @@ I am always open to **collaborations and discussions** in computer vision, multi
 
 ---
 
- #### Audio-Video Cross Attention for Effective Video Action Recognition
+#### Audio-Video Cross Attention for Effective Video Action Recognition
 -	**Authors**:  **Jongseo Lee**, Jang Juhyeon, Jinwoo Choi
 - **Conference**: Korean Institute of Information Scientists and Engineers (KIISE), 2024
 - [Paper Link](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11862452)

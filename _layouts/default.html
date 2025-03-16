@@ -6,21 +6,22 @@
     <title>{{ page.title }}</title>
 
     <!-- CSS 파일 불러오기 -->
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
 </head>
 <body>
 
-    <!-- 네비게이션 바 (모든 페이지에서 동일하게 적용) -->
-    <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
-        <a href="#news">News</a>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#publications">Publications</a>
+            <a href="#projects">Projects</a>
+            <a href="#cv">CV</a>
+            <a href="#contact">Contact</a>
+            <a href="#news">News</a>
+        </nav>
+    </header>
 
-    <!-- 페이지별 컨텐츠가 들어갈 자리 -->
+    <!-- 본문 컨텐츠 -->
     <div class="content">
         {{ content }}
     </div>
