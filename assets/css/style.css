@@ -1,28 +1,138 @@
-/* Fixed Navigation Bar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #003366;
-    padding: 10px 0;
-    z-index: 1000;
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    font-weight: 400;
+    /* line-height: 0.8; */
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 }
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #003366; /* 네이비 블루 */
+}
+/* 맨 위 헤더 스타일 */
+.site-header {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #003366;
+    /* padding: 5px 0; 간격 줄이기 */
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    background: #003366;
+    font-size:20px;
+    padding: 10px;
+    max-width: 900px; /* 중앙 정렬 및 너비 제한 */
+    margin: 40px auto;
+    padding: auto;
+}
+
 .navbar a {
     color: white;
-    padding: 10px 15px;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* 전체 컨텐츠 스타일 */
+.container {
+    max-width: 900px; /* 중앙 정렬 및 너비 제한 */
+    margin: 40px auto;
+    padding: auto;
+    text-align: left;
+}
+
+/* 섹션 구분 */
+.container h2 {
+    border-bottom: 2px solid #003366;
+    padding-bottom: 6px;
+}
+
+/* 논문 스타일 */
+.container h3 {
+    margin-top: 10px;
+    color: #003366;
+}
+
+
+/* Contact 섹션 스타일 */
+#contact {
+    margin-top: 10px;
+}
+
+/* 개별 Contact 카드 스타일 */
+.contact-card {
+    background: #f9f9f9;  /* 연한 배경 */
+    padding: 10px;
+    margin-bottom: 15px;  /* 카드 간 간격 */
+    border-radius: 10px;   /* 모서리 둥글게 */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);  /* 부드러운 그림자 */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+}
+
+/* Contact 아이콘 스타일 */
+.contact-card img {
+    width: 20px;  /* 아이콘 크기 */
+    height: 20px;
+}
+
+/* Contact 텍스트 스타일 */
+.contact-card p {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* 링크 스타일 */
+.contact-card a {
+    color: #0056b3;
     text-decoration: none;
     font-weight: bold;
 }
-.navbar a:hover {
-    background: #00509E;
+
+.contact-card a:hover {
+    text-decoration: underline;
 }
 
-/* Section Styles */
-.section {
-    padding: 80px 20px;
-    max-width: 800px;
-    margin: auto;
+
+/* Publications 섹션 스타일 */
+#publications {
+    margin-top: 40px;
+}
+
+/* 개별 논문 카드 스타일 */
+.paper-card {
+    background: #f9f9f9;  /* 연한 배경 */
+    padding: 20px;
+    margin-bottom: 20px;  /* 논문 간격 조정 */
+    border-radius: 10px;   /* 모서리 둥글게 */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);  /* 부드러운 그림자 */
+}
+
+/* 논문 제목 스타일 */
+.paper-card h3 {
+    color: #003366;  /* 네이비 블루 */
+    margin-bottom: 10px;
+}
+
+/* 논문 정보 스타일 */
+.paper-card p {
+    font-size: 14px;
+    color: #444;
+    margin: 5px 0;
+}
+
+/* 링크 스타일 */
+.paper-card a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.paper-card a:hover {
+    text-decoration: underline;
 }
