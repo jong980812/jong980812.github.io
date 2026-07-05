@@ -1,10 +1,26 @@
 /* 🌍 전체 페이지 스타일 */
+html {
+    scroll-behavior: smooth; /* 앵커 이동 시 부드러운 스크롤 */
+}
+
 body {
     font-family: 'Inter', 'Poppins', sans-serif;
     font-weight: 400;
     text-align: center;
     margin: 0;
     padding: 0;
+    color: #333;
+}
+
+/* 🏠 사이트 헤더 */
+.site-header h1 {
+    font-size: 30px;
+    margin: 30px 10px 10px;
+}
+
+/* 앵커 이동 시 네비바에 가리지 않도록 여백 확보 */
+.container {
+    scroll-margin-top: 20px;
 }
 
 /* 제목 스타일 */
@@ -31,6 +47,20 @@ h1, h2, h3 {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🎓 PhD 지원 뱃지 (.bio-info p보다 우선하도록 구체적 선택자 사용) */
+.bio-info p.phd-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #003366, #00509E);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 6px 0 10px;
+    box-shadow: 0 3px 8px rgba(0, 51, 102, 0.35);
 }
 
 /* 📝 약력 (Bio) */
@@ -169,17 +199,40 @@ h1, h2, h3 {
     margin-top: 40px;
 }
 
+/* Publications 소제목 (International / Domestic) */
+.pub-group {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
 /* 논문 카드 스타일 */
 .paper-card {
     background: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 20px 15px;
+    margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;  /* 세로 배치 */
+    align-items: center;     /* 가운데 정렬 */
+    text-align: center;      /* 텍스트도 가운데 정렬 */
+}
+
+/* 논문 썸네일 */
+.paper-card img {
+    width: 500px;
+    max-width: 100%;         /* 작은 화면에서 카드 밖으로 넘치지 않게 */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .paper-card h3 {
     color: #003366;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
@@ -197,6 +250,52 @@ h1, h2, h3 {
 
 .paper-card a:hover {
     text-decoration: underline;
+}
+
+/* 📣 News 카드 스타일 (기존에 클래스만 있고 스타일 정의가 없었음) */
+.news-card {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.news-card h3 {
+    color: #003366;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0; /* 뉴스 항목 구분선 */
+}
+
+.news-card h3:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.news-card p {
+    font-size: 14px;
+    color: #444;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.news-card a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-card a:hover {
+    text-decoration: underline;
+}
+
+/* 🔴 강조 텍스트 (Spotlight, Highlight 등) */
+.highlight {
+    color: red;
+    font-weight: bold;
 }
 
 /* 📱 반응형 디자인 (모바일 최적화) */
