@@ -269,6 +269,15 @@ section {
 
 .btn-ghost:hover { background: var(--blue-50); }
 
+/* Link to the interactive 3D version of the site */
+.btn-office {
+    background: #fff8e1;
+    color: #7a5b00;
+    border: 1px solid #f1d98a;
+}
+
+.btn-office:hover { background: #fff1c2; box-shadow: var(--shadow-md); }
+
 /* Quick research highlights under the buttons */
 .hero-stats {
     display: flex;
