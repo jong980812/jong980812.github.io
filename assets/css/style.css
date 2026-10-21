@@ -74,6 +74,13 @@ strong, b { color: var(--ink); font-weight: 600; }
 
 .intro-text p { margin-top: 0; }
 
+.intro .sub {
+    margin: 22px 0 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
 .links { margin-top: 18px; color: var(--ink-faint); }
 .links a { font-weight: 500; }
 
