@@ -27,6 +27,7 @@
 <main class="wrap" id="top">
 
     <section class="hero">
+        <svg class="pointer-line" aria-hidden="true"><defs><marker id="ptr-head" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#5F8270" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><path id="ptr-path" marker-end="url(#ptr-head)"/></svg>
         <div class="hero-side">
             <img class="portrait" src="assets/img/profile_guitar.jpg" alt="Portrait of Jongseo Lee" width="160" height="200">
             <h2 class="label">Education</h2>
@@ -295,6 +296,26 @@
             requestAnimationFrame(tick);
         })(last);
         addEventListener('resize', placeBubble);
+
+        // a dotted curve from "Meet the agent…" in the intro to the robot's head
+        const heroEl = document.querySelector('.hero'), phrase = document.querySelector('.to-agent'), ptr = document.getElementById('ptr-path');
+        function drawPointer() {
+            const h = heroEl.getBoundingClientRect(), p = phrase.getClientRects(), q = p[p.length - 1], f = bot.querySelector('.head2').getBoundingClientRect();
+            if (!q) return;
+            const x1 = q.right - h.left + 6, y1 = q.top + q.height / 2 - h.top;
+            let x2, y2, d;
+            if (f.left > q.right + 30) {                   // robot to the right: swing over to its left side
+                x2 = f.left - h.left - 10; y2 = f.top + f.height * 0.55 - h.top;
+                d = `M ${x1} ${y1} C ${x1 + (x2 - x1) * 0.45} ${y1}, ${x2 - 40} ${y2}, ${x2} ${y2}`;
+            } else {                                       // robot below (phones): no curve across the text, just a ↓
+                ptr.removeAttribute('d'); phrase.classList.add('down'); return;
+            }
+            phrase.classList.remove('down');
+            ptr.setAttribute('d', d);
+        }
+        drawPointer();
+        addEventListener('resize', drawPointer);
+        document.fonts && document.fonts.ready.then(drawPointer);
 
         // 360° turn: drag the orbit arrow (or the robot) sideways; a plain click spins it once.
         // 0° faces us, 180° faces the strip. The head squashes with cos(angle) and the face slides with sin(angle).
