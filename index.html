@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=20261021-5">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261021-6">
 </head>
 <body>
 
@@ -296,6 +296,18 @@
             setThought(facing ? HELLO : NEXT[hovered ?? watching()]);
             requestAnimationFrame(tick);
         })(last);
+        // phones: drop the agent lower so the thought bubble fits between the strip and its head
+        const narrow = matchMedia('(max-width: 680px)');
+        const gazeEnds = [...svg.querySelectorAll('.gaze'), svg.querySelector('#gazeL'), svg.querySelector('#gazeR')];
+        function fitPhone() {
+            const dy = narrow.matches ? 56 : 0;
+            bot.setAttribute('transform', `translate(0 ${dy})`);
+            gazeEnds.forEach(el => el.setAttribute('y1', 190 + dy));
+            svg.setAttribute('viewBox', `0 0 380 ${316 + dy}`);
+            placeBubble();
+        }
+        fitPhone();
+        narrow.addEventListener('change', fitPhone);
         addEventListener('resize', placeBubble);
 
         // a dotted curve from "Meet the agent…" in the intro to the robot's head
