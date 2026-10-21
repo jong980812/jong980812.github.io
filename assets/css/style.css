@@ -260,8 +260,7 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 /* the 360° orbit arrow around the robot's base */
 .hero-art .orbit { cursor: ew-resize; outline: none; touch-action: pan-y; }
 .hero-art .orbit-hit { fill: transparent; stroke: transparent; stroke-width: 10; }
-.hero-art .orbit-arc, .hero-art .orbit-head { fill: none; stroke: var(--accent); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke .15s; }
-.hero-art .orbit-t { fill: var(--accent); font: 600 11px 'IBM Plex Mono', ui-monospace, monospace; }
+.hero-art .orbit-arc, .hero-art .orbit-head { fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: stroke .15s; }
 .hero-art .orbit:hover .orbit-arc, .hero-art .orbit:hover .orbit-head, .hero-art .orbit:focus-visible .orbit-arc { stroke: var(--ink); }
 @media (prefers-reduced-motion: reduce) { .hero-art .float { animation: none; } }
 
