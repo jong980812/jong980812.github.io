@@ -368,7 +368,7 @@ footer {
 .hero-art .eye { fill: #A6DBFF; }
 .hero-art .eye-glow { fill: #4FA8FF; opacity: .6; filter: url(#glow); }
 .hero-art .cheek { fill: #FF9C9C; opacity: .55; }
-.hero-art .gaze { stroke: url(#gazeGrad); stroke-width: 1.6; stroke-dasharray: 0.5 5; stroke-linecap: round; }
+.hero-art .gaze { stroke-width: 1.6; stroke-dasharray: 0.5 5; stroke-linecap: round; }
 .hero-art .name { fill: var(--muted); font: 500 11px 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .02em; }
 
 /* the strip drifts slowly to the left, forever */
