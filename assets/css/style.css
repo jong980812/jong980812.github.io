@@ -210,6 +210,17 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 .hero-art .head-s { fill: var(--panel); stroke: var(--ink); stroke-width: 1.4; }
 .hero-art .sun { fill: #FFD98A; }
 .hero-art .cloud { fill: #fff; stroke: #B9C0CB; stroke-width: 1; }
+.hero-art .dom { fill: #E8DCC4; stroke: var(--ink); stroke-width: 1.2; }
+.hero-art .hull { fill: #C98E6A; stroke: var(--ink); stroke-width: 1.2; stroke-linejoin: round; }
+.hero-art .sail { fill: #fff; stroke: var(--ink); stroke-width: 1.2; stroke-linejoin: round; }
+.hero-art .wave { fill: #CFE0EA; }
+.hero-art .net { stroke: #B9C0CB; stroke-width: .8; }
+.hero-art .wheel-c { fill: none; stroke: var(--ink); stroke-width: 1.4; }
+.hero-art .spoke { stroke: #8C8478; stroke-width: 1; }
+.hero-art .cloud-d { fill: #E6E9EE; stroke: #8C95A2; stroke-width: 1.1; stroke-linejoin: round; }
+.hero-art .drop { stroke: #6F9FC8; stroke-width: 1.6; stroke-linecap: round; }
+.hero-art .puddle { fill: #CFE0EA; }
+.hero-art .box.b2 { fill: #F2D9A6; }
 .hero-art .band { fill: #FFF0B3; }
 
 .hero-art .shell { fill: url(#shellGrad); stroke: #2B3340; stroke-width: 1.6; stroke-linejoin: round; }
