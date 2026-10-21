@@ -10,6 +10,8 @@
     --link-hover: #e8780c;
     --award: #c0392b;
     --accent-bg: #fff8e6;
+    --bg: #f2f4f7;
+    --panel: #fff;
 }
 
 * { box-sizing: border-box; }
@@ -18,7 +20,7 @@ html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
-    background: #fff;
+    background: var(--bg);
     color: var(--ink-soft);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 15.5px;
@@ -34,7 +36,17 @@ strong, b { color: var(--ink); font-weight: 600; }
 .page {
     max-width: 980px;
     margin: 0 auto;
-    padding: 56px 24px 40px;
+    padding: 40px 24px 32px;
+}
+
+/* Each block sits on its own white panel */
+.intro,
+section {
+    background: var(--panel);
+    border: 1px solid #e4e8ee;
+    border-radius: 16px;
+    padding: 36px 40px;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
 }
 
 /* ---------- Intro ---------- */
@@ -56,7 +68,8 @@ strong, b { color: var(--ink); font-weight: 600; }
 }
 
 .role {
-    margin: 2px 0 12px;
+    margin: 10px 0 16px;
+    line-height: 1.6;
     color: var(--ink-faint);
 }
 
@@ -75,7 +88,7 @@ strong, b { color: var(--ink); font-weight: 600; }
 .intro-text p { margin-top: 0; }
 
 .intro .sub {
-    margin: 24px 0 6px;
+    margin: 28px 0 8px;
     font-size: 19px;
     font-weight: 600;
     color: var(--ink);
@@ -104,11 +117,12 @@ strong, b { color: var(--ink); font-weight: 600; }
 
 /* ---------- Sections ---------- */
 
-section { margin-top: 44px; }
+section { margin-top: 20px; }
 
 h2 {
     margin: 0 0 14px;
-    padding-bottom: 6px;
+    padding-bottom: 0;
+    border-bottom: none !important;
     font-size: 21px;
     font-weight: 700;
     color: var(--ink);
@@ -213,9 +227,8 @@ h3 {
 /* ---------- Footer ---------- */
 
 footer {
-    margin-top: 56px;
-    padding-top: 16px;
-    border-top: 1px solid var(--line);
+    margin-top: 28px;
+    padding-top: 0;
     font-size: 13px;
     color: var(--ink-faint);
     text-align: center;
@@ -224,7 +237,8 @@ footer {
 /* ---------- Mobile ---------- */
 
 @media (max-width: 720px) {
-    .page { padding: 32px 16px; }
+    .page { padding: 16px 12px; }
+    .intro, section { padding: 24px 20px; border-radius: 12px; }
     .intro { flex-direction: column-reverse; align-items: center; gap: 20px; }
     .photo { width: 150px; height: 150px; }
     .pub { flex-direction: column; align-items: stretch; gap: 12px; }
