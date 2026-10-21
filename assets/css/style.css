@@ -355,3 +355,13 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
     .news li { grid-template-columns: 1fr; gap: 0; }
     .foot .wrap { flex-direction: column; }
 }
+
+/* ---------- iOS weight fix ----------
+   iOS WebKit can draw Google's variable fonts at their default (thin) instance and ignore
+   font-weight. Setting the weight axis explicitly fixes it; static fonts ignore this. */
+body { font-variation-settings: "wght" 400; }
+b, strong { font-variation-settings: "wght" 700; }
+.label, .hero h1 .ko, .news li.latest time, .hero-art .hint, .agent-say { font-variation-settings: "wght" 500; }
+.topbar nav, .links, .ri, .venue i, .more summary, .hero-art .name, .to-agent { font-variation-settings: "wght" 600; }
+.brand, .hero h1, .status, .sec-head h2, .filters button.on, .pub h3, .venue, .sub, .keywords em { font-variation-settings: "wght" 700; }
+@media (max-width: 680px) { body { font-variation-settings: "wght" 500; } }
