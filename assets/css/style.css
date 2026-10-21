@@ -469,6 +469,30 @@ section {
     border-left: 4px solid var(--accent);
 }
 
+/* Compact one-line news list */
+.news-list {
+    list-style: none;
+    padding: 6px 24px;
+    margin: 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.news-list li {
+    display: flex;
+    gap: 20px;
+    padding: 12px 0;
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--line);
+}
+
+.news-list li:last-child { border-bottom: none; }
+
+.news-list strong { color: var(--ink); }
+
 /* ---------- Publications ---------- */
 
 /* This section is intentionally wider than the rest of the page so the
@@ -679,6 +703,7 @@ section {
     .pub-thumb video { height: auto; max-height: 340px; }
 
     .news-item { flex-direction: column; gap: 6px; }
+    .news-list li { flex-direction: column; gap: 2px; }
     .news-date { width: auto; }
 
     .nav-links a { padding: 7px 9px; font-size: 13.5px; }
