@@ -16,9 +16,8 @@
     <div class="wrap">
         <a class="brand" href="#top">Jongseo Lee</a>
         <nav>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
             <a href="#news">News</a>
+            <a href="#publications">Publications</a>
             <a href="assets/Jongseo_Lee_CV.pdf" target="_blank" rel="noopener">CV</a>
             <a class="office" href="https://jong980812.github.io/walk-in-homepage/">3D Office ↗</a>
         </nav>
@@ -31,7 +30,7 @@
         <div class="hero-side">
             <img class="portrait" src="assets/img/profile_guitar.jpg" alt="Portrait of Jongseo Lee" width="160" height="200">
             <h2 class="label">Education</h2>
-            <ul class="edu"><li><time>2025 – now</time><span><b>Post-Master Researcher</b>, Kyung Hee Univ.</span></li><li><time>2023 – 2025</time><span><b>M.S. Computer Science</b>, Kyung Hee Univ.</span></li><li><time>2017 – 2023</time><span><b>B.S. Biomedical Eng. & Electronics Eng.</b>, Kyung Hee Univ.</span></li></ul>
+            <ul class="edu"><li><time>2025 – now</time><b>Post-Master Researcher</b><span>Kyung Hee Univ.</span></li><li><time>2023 – 2025</time><b>M.S. Computer Science</b><span>Kyung Hee Univ.</span></li><li><time>2017 – 2023</time><b>B.S. Biomedical Eng.<br>&amp; Electronics Eng.</b><span>Kyung Hee Univ.</span></li></ul>
         </div>
         <div class="hero-main">
             <h1>Jongseo Lee</h1>
@@ -39,8 +38,8 @@
             Advisor: <a href="https://sites.google.com/site/jchoivision/" target="_blank" rel="noopener">Prof. Jinwoo Choi</a></p>
             <p class="bio">I study how visual experience becomes knowledge of the world, from interpretable video models to video world models.
             Ultimately, I hope to build an agent that watches the world, understands it, and <span class="to-agent">knows what comes next</span></p>
-            <p class="keywords"><em>Keywords:</em> video understanding, trustworthy AI, multimodal vision</p>
-            <p class="status">Seeking PhD positions in the U.S., Fall 2027</p>
+            <p class="keywords"><em>Keywords:</em> video understanding, video world models, interpretability, multimodal learning</p>
+            <p class="status"><span class="dot" aria-hidden="true"></span>Seeking PhD positions in the U.S., Fall 2027</p>
             <p class="links">
                 <a href="mailto:jong980812@khu.ac.kr">jong980812@khu.ac.kr</a>
                 <a href="assets/Jongseo_Lee_CV.pdf" target="_blank" rel="noopener">CV</a>
@@ -122,9 +121,9 @@
         </div>
     </section>
 
-    <section id="research">
-        <div class="sec-head"><h2>Research Interests</h2></div>
-        <div class="ri-row"><button class="ri" data-filter="video" type="button">Multimodal video understanding</button><button class="ri" data-filter="xai" type="button">Trustworthy & explainable vision</button><button class="ri now" data-filter="world" type="button">Video world models & physical AI</button></div>
+    <section id="news">
+        <div class="sec-head"><h2>News</h2></div>
+        <ul class="news"><li class="latest"><time>2026.10</time><span>Selected as a Top Reviewer for <b>NeurIPS 2026</b>.</span></li><li><time>2026.09</time><span>Two papers accepted to <b>NeurIPS 2026</b>: <a href="https://hyuntak03.github.io/DeltaDirect/" target="_blank" rel="noopener">DeltaDirect</a> and <a href="https://leewooil.github.io/TraCE_project_page/" target="_blank" rel="noopener">TRACE</a>.</span></li><li><time>2025.11</time><span><a href="https://arxiv.org/abs/2503.23447" target="_blank" rel="noopener">CA²ST</a> accepted to <b>IEEE TPAMI</b>.</span></li><li><time>2025.09</time><span><a href="https://jong980812.github.io/DANCE/" target="_blank" rel="noopener">DANCE</a> accepted to <b>NeurIPS 2025</b> as a Spotlight (top 3.5%).</span></li><li><time>2025.07</time><span><a href="https://arxiv.org/abs/2508.10896" target="_blank" rel="noopener">ESSENTIAL</a> accepted to <b>ICCV 2025</b> as a Highlight.</span></li></ul>
     </section>
 
     <section id="publications">
@@ -200,10 +199,6 @@
         </details>
     </section>
 
-    <section id="news">
-        <div class="sec-head"><h2>News</h2></div>
-        <ul class="news"><li class="latest"><time>2026.10</time><span>Selected as a Top Reviewer for <b>NeurIPS 2026</b>.</span></li><li><time>2026.09</time><span>Two papers accepted to <b>NeurIPS 2026</b>: <a href="https://hyuntak03.github.io/DeltaDirect/" target="_blank" rel="noopener">DeltaDirect</a> and <a href="https://leewooil.github.io/TraCE_project_page/" target="_blank" rel="noopener">TRACE</a>.</span></li><li><time>2025.11</time><span><a href="https://arxiv.org/abs/2503.23447" target="_blank" rel="noopener">CA²ST</a> accepted to <b>IEEE TPAMI</b>.</span></li><li><time>2025.09</time><span><a href="https://jong980812.github.io/DANCE/" target="_blank" rel="noopener">DANCE</a> accepted to <b>NeurIPS 2025</b> as a Spotlight (top 3.5%).</span></li><li><time>2025.07</time><span><a href="https://arxiv.org/abs/2508.10896" target="_blank" rel="noopener">ESSENTIAL</a> accepted to <b>ICCV 2025</b> as a Highlight.</span></li></ul>
-    </section>
 
 </main>
 
@@ -215,20 +210,15 @@
 </footer>
 
 <script>
-    // Publications: filter by research topic (cards and tabs share the same filter)
+    // Publications: filter by research topic
     (function () {
         const tabs = [...document.querySelectorAll('.filters button')];
-        const cards = [...document.querySelectorAll('.ri')];
         const items = [...document.querySelectorAll('.pub, .plain li[data-tags]')];
         function apply(f) {
             tabs.forEach(b => b.classList.toggle('on', b.dataset.filter === f));
             items.forEach(el => { el.hidden = f !== 'all' && !el.dataset.tags.split(' ').includes(f); });
         }
         tabs.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter)));
-        cards.forEach(c => c.addEventListener('click', () => {
-            apply(c.dataset.filter);
-            document.getElementById('publications').scrollIntoView({ behavior: 'smooth' });
-        }));
 
         // the robot's eye drifts a little toward the pointer
         const pupils = [...document.querySelectorAll('.hero-art .pupil')];

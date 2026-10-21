@@ -76,7 +76,8 @@ b, strong { font-weight: 700; }
 }
 
 .edu { list-style: none; margin: 0; padding: 0; }
-.edu li { margin-bottom: 8px; font-size: 13.5px; line-height: 1.35; color: var(--ink); }
+.edu li { margin-bottom: 10px; font-size: 13.5px; line-height: 1.35; color: var(--ink); }
+.edu b, .edu span { display: block; }
 .edu time { display: block; font: 400 11.5px var(--mono); color: var(--faint); }
 
 .hero h1 {
@@ -89,8 +90,11 @@ b, strong { font-weight: 700; }
 
 .aff { margin: 10px 0 14px; font-size: 15px; line-height: 1.55; color: var(--muted); }
 .bio { margin: 0 0 14px; font-size: 17px; line-height: 1.6; color: var(--ink); max-width: 34em; }
-.status { margin: 0 0 12px; font-weight: 700; color: var(--accent); }
+.status { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; font-weight: 700; color: var(--ink); }
+.status .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(95, 130, 112, .18); }
 .links { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 15px; font-weight: 600; }
+.links a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+.links a:hover { color: var(--accent); }
 
 
 /* ---------- Sections ---------- */
