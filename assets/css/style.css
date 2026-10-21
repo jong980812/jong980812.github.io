@@ -6,8 +6,8 @@
     /* soft ivory palette: warm paper, gentle ink, one quiet sage accent */
     --bg: #FBF8F1;
     --ink: #2E2A25;
-    --muted: #7B7369;
-    --faint: #A59D92;
+    --muted: #2E2A25;
+    --faint: #2E2A25;
     --line: #E6DFD2;
     --line-soft: #EFE9DE;
     --accent: #5F8270;
@@ -133,11 +133,11 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
     background: none;
     border: 0;
     border-bottom: 2px solid transparent;
-    font: 600 14px var(--body);
-    color: var(--faint);
+    font: 400 14px var(--body);
+    color: var(--ink);
     cursor: pointer;
 }
-.filters button.on { color: var(--ink); border-bottom-color: var(--accent); }
+.filters button.on { color: var(--ink); font-weight: 700; border-bottom-color: var(--accent); }
 
 /* Publication rows */
 .pub {
@@ -164,8 +164,9 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 .pub h3 a { color: var(--ink); }
 .pub-au { margin: 0 0 4px; font-size: 15px; color: #4A443D; }
 .pub-meta { margin: 0; font-size: 15px; color: var(--muted); }
-.venue { font-weight: 700; color: var(--accent); }
-.soon { font-style: italic; color: var(--faint); }
+.venue { font-weight: 700; color: var(--ink); }
+.venue i { font-weight: 600; }
+.soon { font-style: italic; }
 
 .pub-note { margin: 10px 0 0; font-size: 13px; color: var(--faint); }
 
