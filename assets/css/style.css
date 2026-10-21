@@ -32,7 +32,7 @@ a:hover { color: var(--link-hover); }
 strong, b { color: var(--ink); font-weight: 600; }
 
 .page {
-    max-width: 920px;
+    max-width: 980px;
     margin: 0 auto;
     padding: 56px 24px 40px;
 }
@@ -124,14 +124,16 @@ h3 {
 .news li {
     display: flex;
     gap: 18px;
-    padding: 4px 0;
+    padding: 1px 0;
+    line-height: 1.55;
 }
 
 .news .date {
     flex-shrink: 0;
     width: 100px;
     white-space: nowrap;
-    color: var(--ink-faint);
+    color: var(--ink);
+    font-weight: 500;
     font-variant-numeric: tabular-nums;
 }
 
@@ -139,15 +141,15 @@ h3 {
 
 .pub {
     display: flex;
-    gap: 24px;
+    gap: 28px;
     align-items: center;
-    padding: 18px 0;
+    padding: 20px 0;
 }
 
 .pub + .pub { border-top: 1px solid var(--line); }
 
 .thumb {
-    width: 220px;
+    width: 300px;
     flex-shrink: 0;
 }
 
@@ -155,7 +157,7 @@ h3 {
 .thumb video {
     display: block;
     width: 100%;
-    max-height: 150px;
+    max-height: 200px;
     object-fit: contain;
     border-radius: 6px;
 }
@@ -165,18 +167,18 @@ h3 {
 .info .title {
     display: block;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.45;
     color: var(--ink);
 }
 
 .info a.title:hover { color: var(--link-hover); }
 
-.authors { font-size: 14.5px; }
+.authors { font-size: 15.5px; }
 
-.venue { font-size: 14.5px; }
+.venue { font-size: 15.5px; }
 
-.plinks { font-size: 14px; color: var(--ink-faint); }
+.plinks { font-size: 15px; color: var(--ink-faint); }
 .muted { font-style: italic; }
 
 .compact {
