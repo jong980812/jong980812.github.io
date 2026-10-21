@@ -240,38 +240,38 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 
 /* round floating cat robot: seen from behind while it watches the strip; the arrows turn it around */
 .hero-art .v2 { fill: url(#shell2); stroke: #BDB3A1; stroke-width: 1.3; }
-.hero-art .ear-in2 { fill: #F6C7C2; opacity: 0; transition: opacity .2s; }
+.hero-art .ear-in2 { fill: #F6C7C2; }
 .hero-art .gloss2 { fill: #fff; opacity: .9; }
 .hero-art .seam2 { fill: none; stroke: #CFC8B9; stroke-width: 1.4; }
 .hero-art .vb-light { fill: var(--accent); }
-.hero-art .glow2 { fill: url(#beam2); transition: opacity .2s; }
+.hero-art .glow2 { fill: url(#beam2); }
 .hero-art .bot .screen { fill: url(#face2); }
 .hero-art .eye2 { fill: url(#scan2); }
 .hero-art .blush2 { fill: #FF9C9C; opacity: .55; }
 .hero-art .mouth2 { fill: none; stroke: #F3F1EC; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .hero-art .whisk2 { fill: none; stroke: #BDB3A1; stroke-width: 1.4; stroke-linecap: round; }
-.hero-art .front2 { opacity: 0; transition: opacity .15s; }
-.hero-art .back2 { transition: opacity .15s; }
-.hero-art .bot.turn .front2, .hero-art .bot.turn .ear-in2 { opacity: 1; }
-.hero-art .bot.turn .back2, .hero-art .bot.turn .glow2 { opacity: 0; }
+.hero-art .front2 { opacity: 0; }
+.hero-art .ear-in2 { opacity: 0; }
 
-.hero-art .float { animation: float2 4.5s ease-in-out infinite; cursor: pointer; }
+.hero-art .float { animation: float2 4.5s ease-in-out infinite; cursor: grab; touch-action: pan-y; }
 @keyframes float2 { 50% { transform: translateY(-4px); } }
-.hero-art .head2 { transform-box: fill-box; transform-origin: 50% 50%; }
-.hero-art .bot.spin .head2 { animation: spin2 .44s ease-in-out; }
-@keyframes spin2 { 50% { transform: scaleX(.05); } }
 
-.hero-art .turn-btn { cursor: pointer; outline: none; }
-.hero-art .tb-hit { fill: transparent; }
-.hero-art .tb, .hero-art .tb-head { fill: none; stroke: var(--accent); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke .15s; }
-.hero-art .turn-btn:hover .tb, .hero-art .turn-btn:hover .tb-head,
-.hero-art .turn-btn:focus-visible .tb, .hero-art .turn-btn:focus-visible .tb-head { stroke: var(--ink); }
-.hero-art .turn-btn:focus-visible .tb-hit { stroke: var(--accent); stroke-width: 1.5; }
-@media (prefers-reduced-motion: reduce) { .hero-art .float, .hero-art .bot.spin .head2 { animation: none; } }
+/* the 360° orbit arrow around the robot's base */
+.hero-art .orbit { cursor: ew-resize; outline: none; touch-action: pan-y; }
+.hero-art .orbit-hit { fill: transparent; stroke: transparent; stroke-width: 10; }
+.hero-art .orbit-arc, .hero-art .orbit-head { fill: none; stroke: var(--accent); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke .15s; }
+.hero-art .orbit-t { fill: var(--accent); font: 600 11px 'IBM Plex Mono', ui-monospace, monospace; }
+.hero-art .orbit:hover .orbit-arc, .hero-art .orbit:hover .orbit-head, .hero-art .orbit:focus-visible .orbit-arc { stroke: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .hero-art .float { animation: none; } }
 
-/* the intro points at the agent */
-.to-agent::after { content: " →"; color: var(--accent); font-weight: 700; }
+/* the intro points at the agent: the phrase and its arrow stay together */
+.to-agent { white-space: nowrap; color: var(--accent); font-weight: 600; }
+.to-agent::after { content: " →"; }
 @media (max-width: 1000px) { .to-agent::after { content: " ↓"; } }
+
+/* journal-style keywords under the intro */
+.keywords { margin: -4px 0 14px; font: 400 16px/1.5 'Times New Roman', Times, serif; color: var(--ink); }
+.keywords em { font-weight: 700; }
 
 /* interaction: hover a clip, click the robot */
 .hero-art .clip { cursor: default; }
