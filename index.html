@@ -29,16 +29,17 @@
 
     <section class="hero">
         <div class="hero-side">
-            <img class="portrait" src="assets/img/profile.jpg" alt="Portrait of Jongseo Lee" width="160" height="200">
+            <img class="portrait" src="assets/img/profile_guitar.jpg" alt="Portrait of Jongseo Lee" width="160" height="200">
             <h2 class="label">Education</h2>
-            <ul class="edu"><li><time>2025 – now</time><span>Post-Master Researcher, Kyung Hee Univ.</span></li><li><time>2023 – 2025</time><span>M.S. Computer Science, Kyung Hee Univ.</span></li><li><time>2017 – 2023</time><span>B.S. Biomedical Eng. & Electronics Eng., Kyung Hee Univ.</span></li></ul>
+            <ul class="edu"><li><time>2025 – now</time><span><b>Post-Master Researcher</b>, Kyung Hee Univ.</span></li><li><time>2023 – 2025</time><span><b>M.S. Computer Science</b>, Kyung Hee Univ.</span></li><li><time>2017 – 2023</time><span><b>B.S. Biomedical Eng. & Electronics Eng.</b>, Kyung Hee Univ.</span></li></ul>
         </div>
         <div class="hero-main">
             <h1>Jongseo Lee</h1>
-            <p class="aff">Post-Master Researcher, <a href="https://vll.khu.ac.kr" target="_blank" rel="noopener">Vision and Learning Lab</a>, Kyung Hee University<br>
+            <p class="aff"><b>Post-Master Researcher</b>, <a href="https://vll.khu.ac.kr" target="_blank" rel="noopener">Vision and Learning Lab</a>, Kyung Hee University<br>
             Advisor: <a href="https://sites.google.com/site/jchoivision/" target="_blank" rel="noopener">Prof. Jinwoo Choi</a></p>
             <p class="bio">I study how visual experience becomes knowledge of the world, from interpretable video models to video world models.
-            Ultimately, I hope to build an agent that watches the world, understands it, and knows what comes next<span class="to-agent" aria-hidden="true"></span></p>
+            Ultimately, I hope to build an agent that watches the world, understands it, and <span class="to-agent">knows what comes next</span></p>
+            <p class="keywords"><em>Keywords:</em> video understanding, trustworthy AI, multimodal vision</p>
             <p class="status">Seeking PhD positions in the U.S., Fall 2027</p>
             <p class="links">
                 <a href="mailto:jong980812@khu.ac.kr">jong980812@khu.ac.kr</a>
@@ -83,18 +84,18 @@
                         </defs>
                         <ellipse class="shadow" cx="95" cy="214" rx="34" ry="5"/>
                         <text class="name" x="95" y="237" text-anchor="middle">Video Agent</text>
-                        <g class="turn-btn" data-dir="-1" role="button" tabindex="0" aria-label="Turn the agent around">
-                            <circle class="tb-hit" cx="30" cy="206" r="13"/>
-                            <path class="tb" d="M38 211 A 10 10 0 1 1 33 197"/><path class="tb-head" d="M29 193 L35 197 L29 201"/>
-                        </g>
-                        <g class="turn-btn" data-dir="1" role="button" tabindex="0" aria-label="Turn the agent around">
-                            <circle class="tb-hit" cx="160" cy="206" r="13"/>
-                            <path class="tb" d="M152 211 A 10 10 0 1 0 157 197"/><path class="tb-head" d="M161 193 L155 197 L161 201"/>
+                        <g class="orbit" role="slider" tabindex="0" aria-label="Turn the agent around (drag, or use the arrow keys)" aria-valuemin="0" aria-valuemax="360" aria-valuenow="180">
+                            <ellipse class="orbit-hit" cx="95" cy="206" rx="58" ry="12"/>
+                            <path class="orbit-arc" d="M 47 211 A 52 9 0 1 0 63 199"/>
+                            <path class="orbit-head" d="M 57 195.5 L 64 199 L 58 203.5"/>
+                            <text class="orbit-t" x="152" y="203">360°</text>
                         </g>
                         <g class="float">
                             <ellipse class="glow2" cx="100" cy="88" rx="44" ry="16"/>
-                            <ellipse class="v2" cx="38" cy="166" rx="9" ry="16" transform="rotate(-28 38 166)"/>
-                            <ellipse class="v2" cx="152" cy="110" rx="9" ry="16" transform="rotate(38 152 110)"/>
+                            <g class="arms2">
+                                <ellipse class="v2" cx="38" cy="166" rx="9" ry="16" transform="rotate(-28 38 166)"/>
+                                <ellipse class="v2" cx="152" cy="110" rx="9" ry="16" transform="rotate(38 152 110)"/>
+                            </g>
                             <g class="head2">
                                 <path class="v2" d="M47 122 C 42 98 47 80 57 77 C 66 76 77 89 86 103 Z"/>
                                 <path class="v2" d="M143 122 C 148 98 143 80 133 77 C 124 76 113 89 104 103 Z"/>
@@ -154,7 +155,7 @@
                 <div class="pub-body">
                     <h3><a href="https://arxiv.org/abs/2511.03725" target="_blank" rel="noopener">Disentangled Concepts Speak Louder Than Words: Explainable Video Action Recognition</a></h3>
                     <p class="pub-au"><b>Jongseo Lee</b>, Wooil Lee, Gyeong-Moon Park†, Seong Tae Kim†, Jinwoo Choi†</p>
-                    <p class="pub-meta"><span class="venue">NeurIPS 2025 · Spotlight</span> · <a href="https://arxiv.org/abs/2511.03725" target="_blank" rel="noopener">paper</a> · <a href="https://github.com/KHU-VLL/DANCE" target="_blank" rel="noopener">code</a> · <a href="https://jong980812.github.io/DANCE/" target="_blank" rel="noopener">page</a></p>
+                    <p class="pub-meta"><span class="venue">NeurIPS 2025 · <i>Spotlight</i></span> · <a href="https://arxiv.org/abs/2511.03725" target="_blank" rel="noopener">paper</a> · <a href="https://github.com/KHU-VLL/DANCE" target="_blank" rel="noopener">code</a> · <a href="https://jong980812.github.io/DANCE/" target="_blank" rel="noopener">page</a></p>
                 </div>
             </article>
             <article class="pub" data-tags="video">
@@ -162,7 +163,7 @@
                 <div class="pub-body">
                     <h3><a href="https://arxiv.org/abs/2508.10896" target="_blank" rel="noopener">ESSENTIAL: Episodic and Semantic Memory Integration for Video Class-Incremental Learning</a></h3>
                     <p class="pub-au"><b>Jongseo Lee*</b>, Kyungho Bae*, Kyle Min, Gyeong-Moon Park†, Jinwoo Choi†</p>
-                    <p class="pub-meta"><span class="venue">ICCV 2025 · Highlight</span> · <a href="https://arxiv.org/abs/2508.10896" target="_blank" rel="noopener">paper</a> · <a href="https://github.com/KHU-VLL/ESSENTIAL" target="_blank" rel="noopener">code</a></p>
+                    <p class="pub-meta"><span class="venue">ICCV 2025 · <i>Highlight</i></span> · <a href="https://arxiv.org/abs/2508.10896" target="_blank" rel="noopener">paper</a> · <a href="https://github.com/KHU-VLL/ESSENTIAL" target="_blank" rel="noopener">code</a></p>
                 </div>
             </article>
             <article class="pub" data-tags="video">
@@ -178,7 +179,7 @@
                 <div class="pub-body">
                     <h3><a href="https://arxiv.org/abs/2504.13140" target="_blank" rel="noopener">PCBEAR: Pose Concept Bottleneck for Explainable Action Recognition</a></h3>
                     <p class="pub-au"><b>Jongseo Lee</b>, Wooil Lee, Gyeong-Moon Park†, Seong Tae Kim†, Jinwoo Choi†</p>
-                    <p class="pub-meta"><span class="venue">CVPR 2025 Workshop (XAI4CV) · Spotlight</span> · <a href="https://arxiv.org/abs/2504.13140" target="_blank" rel="noopener">paper</a></p>
+                    <p class="pub-meta"><span class="venue">CVPR 2025 Workshop (XAI4CV) · <i>Spotlight</i></span> · <a href="https://arxiv.org/abs/2504.13140" target="_blank" rel="noopener">paper</a></p>
                 </div>
             </article>
             <article class="pub" data-tags="video">
@@ -190,7 +191,7 @@
                 </div>
             </article>
         </div>
-        <p class="pub-note">* equal contribution &nbsp; † corresponding author</p>
+        <p class="pub-note"><i>* equal contribution &nbsp; † corresponding author</i></p>
 
         <h3 class="sub">Position paper &amp; preprints</h3>
         <ul class="plain"><li data-tags="world"><a href="main.pdf" target="_blank" rel="noopener">World Models Should Learn to Perceive Before They Act</a> · Jongseo Lee · Position paper, 2026</li><li data-tags="xai"><a href="https://arxiv.org/abs/2409.18260" target="_blank" rel="noopener">PCEvE: Part Contribution Evaluation Based Model Explanation for Human Figure Drawing Assessment and Beyond</a> · Jongseo Lee*, Geo Ahn*, Seong Tae Kim†, Jinwoo Choi† · arXiv 2024</li></ul>
@@ -306,16 +307,51 @@
         })(last);
         addEventListener('resize', placeBubble);
 
-        // turning around: squash, swap faces, unsquash
-        const turn = () => {
-            bot.classList.remove('spin'); void bot.getBBox(); bot.classList.add('spin');
-            setTimeout(() => { facing = !facing; bot.classList.toggle('turn', facing); }, still ? 0 : 220);
-        };
-        svg.querySelectorAll('.turn-btn').forEach(b => {
-            b.addEventListener('click', turn);
-            b.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); turn(); } });
+        // 360° turn: drag the orbit arrow (or the robot) sideways; a plain click spins it once.
+        // 0° faces us, 180° faces the strip. The head squashes with cos(angle) and the face slides with sin(angle).
+        const head = bot.querySelector('.head2'), arms = bot.querySelector('.arms2');
+        const front = bot.querySelector('.front2'), back = bot.querySelector('.back2'), earIn = bot.querySelectorAll('.ear-in2'), glow = bot.querySelector('.glow2');
+        const orbit = bot.querySelector('.orbit');
+        let angle = 180;
+        function pose() {
+            const r = angle * Math.PI / 180, c = Math.cos(r), sn = Math.sin(r);
+            head.setAttribute('transform', `translate(95 142) scale(${Math.max(0.08, Math.abs(c)).toFixed(3)} 1) translate(-95 -142)`);
+            arms.setAttribute('transform', `translate(95 0) scale(${c.toFixed(3)} 1) translate(-95 0)`);
+            front.setAttribute('transform', `translate(${(sn * 10).toFixed(2)} 0)`);
+            back.setAttribute('transform', `translate(${(-sn * 10).toFixed(2)} 0)`);
+            front.style.opacity = c > 0 ? 1 : 0;
+            back.style.opacity = c > 0 ? 0 : 1;
+            earIn.forEach(e => { e.style.opacity = Math.max(0, c); });
+            glow.style.opacity = Math.max(0, -c);
+            facing = c > 0.2;
+            orbit.setAttribute('aria-valuenow', Math.round(((angle % 360) + 360) % 360));
+        }
+        pose();
+        let drag = null, spin = null;
+        function startDrag(e) { drag = { x: e.clientX, a: angle, moved: false }; e.preventDefault(); }
+        [orbit, bot.querySelector('.float')].forEach(el => el.addEventListener('pointerdown', startDrag));
+        addEventListener('pointermove', e => {
+            if (!drag) return;
+            const dx = e.clientX - drag.x;
+            if (Math.abs(dx) > 3) drag.moved = true;
+            angle = drag.a + dx * 1.4; pose();
         });
-        bot.querySelector('.float').addEventListener('click', turn);
+        addEventListener('pointerup', () => {
+            if (drag && !drag.moved) {                 // a click: one full spin, landing where it started
+                const from = angle, t0 = performance.now(), dur = still ? 0 : 1100;
+                cancelAnimationFrame(spin);
+                (function go(now) {
+                    const k = dur ? Math.min(1, (now - t0) / dur) : 1, e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+                    angle = from + 360 * e; pose();
+                    if (k < 1) spin = requestAnimationFrame(go);
+                })(t0);
+            }
+            drag = null;
+        });
+        orbit.addEventListener('keydown', e => {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { angle += e.key === 'ArrowRight' ? 30 : -30; pose(); e.preventDefault(); }
+            if (e.key === 'Enter' || e.key === ' ') { angle += 180; pose(); e.preventDefault(); }
+        });
 
         // reduced motion: stop the clips inside the strips as well (SMIL ignores CSS)
         if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
