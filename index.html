@@ -35,27 +35,36 @@
                     <a href="https://jong980812.github.io/walk-in-homepage/">3D Office ↗</a>
                 </p>
             </div>
-            <figure class="hero-figure">
-                <svg class="hero-svg" viewBox="0 0 480 300" role="img" aria-label="A small robot projects a beam from its eye; everyday scenes pass through the beam, each labeled with what the robot understands, and a dashed frame marks its prediction of what comes next.">
-                    <defs><clipPath id="beam-clip"><rect x="114" y="0" width="366" height="300"/></clipPath></defs>
-                    <line class="floor" x1="16" y1="280" x2="480" y2="280"/>
-                    <polygon class="beam b1" points="102,122 480,20 480,230 102,134"/>
-                    <polygon class="beam b2" points="102,124 480,56 480,196 102,132"/>
-                    <g clip-path="url(#beam-clip)"><g class="frames"><g class="set"><g class="fr" transform="translate(150 118)"><rect class="fr-box" width="92" height="64" rx="3"/><path class="dot" d="M10 14 Q 48 2 70 48"/><circle class="ghost" cx="30" cy="9" r="4.5"/><circle class="solid" cx="70" cy="50" r="5.5"/><line class="gnd" x1="8" y1="57" x2="84" y2="57"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.322">falls</text></g><g class="fr" transform="translate(254 110)"><rect class="fr-box" width="92" height="64" rx="3"/><circle class="stick" cx="34" cy="15" r="5"/><path class="stick" d="M34 20 V38 M34 38 L26 53 M34 38 L42 53 M34 26 L26 34 M34 26 L43 31"/><path class="dir" d="M52 33 H74 M68 28 L74 33 L68 38"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.072">walks →</text></g><g class="fr" transform="translate(358 110)"><rect class="fr-box" width="92" height="64" rx="3"/><line class="dot" x1="10" y1="42" x2="40" y2="42"/><circle class="solid" cx="46" cy="42" r="6"/><rect class="box" x="50" y="18" width="30" height="38" rx="1.5"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.822">goes behind</text></g><g class="fr next" transform="translate(462 118)"><rect class="fr-box" width="92" height="64" rx="3"/><text class="q" x="46" y="38" text-anchor="middle">?</text><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.572">t+1</text></g></g><g class="set" transform="translate(416 0)"><g class="fr" transform="translate(150 118)"><rect class="fr-box" width="92" height="64" rx="3"/><path class="dot" d="M10 14 Q 48 2 70 48"/><circle class="ghost" cx="30" cy="9" r="4.5"/><circle class="solid" cx="70" cy="50" r="5.5"/><line class="gnd" x1="8" y1="57" x2="84" y2="57"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.322">falls</text></g><g class="fr" transform="translate(254 110)"><rect class="fr-box" width="92" height="64" rx="3"/><circle class="stick" cx="34" cy="15" r="5"/><path class="stick" d="M34 20 V38 M34 38 L26 53 M34 38 L42 53 M34 26 L26 34 M34 26 L43 31"/><path class="dir" d="M52 33 H74 M68 28 L74 33 L68 38"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.072">walks →</text></g><g class="fr" transform="translate(358 110)"><rect class="fr-box" width="92" height="64" rx="3"/><line class="dot" x1="10" y1="42" x2="40" y2="42"/><circle class="solid" cx="46" cy="42" r="6"/><rect class="box" x="50" y="18" width="30" height="38" rx="1.5"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.822">goes behind</text></g><g class="fr next" transform="translate(462 118)"><rect class="fr-box" width="92" height="64" rx="3"/><text class="q" x="46" y="38" text-anchor="middle">?</text><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.572">t+1</text></g></g></g></g>
-                    <g class="robot">
-                        <line x1="66" y1="96" x2="66" y2="76"/><circle class="ant" cx="66" cy="72" r="4"/>
-                        <rect x="16" y="180" width="14" height="56" rx="7"/><rect x="102" y="180" width="14" height="56" rx="7"/>
-                        <rect x="38" y="266" width="24" height="14" rx="4"/><rect x="70" y="266" width="24" height="14" rx="4"/>
-                        <rect x="30" y="172" width="72" height="96" rx="16"/>
-                        <rect x="58" y="162" width="16" height="10"/>
-                        <rect x="24" y="96" width="84" height="66" rx="14"/>
-                        <rect class="chest" x="46" y="192" width="40" height="22" rx="4"/>
-                        <circle class="led" cx="56" cy="203" r="3"/><circle class="led on" cx="66" cy="203" r="3"/><circle class="led" cx="76" cy="203" r="3"/>
-                        <circle class="lens" cx="84" cy="128" r="18"/><circle class="iris" cx="84" cy="128" r="9"/><circle class="glint" cx="88" cy="124" r="3"/>
+            <div class="hero-stage">
+                <svg class="hero-art" viewBox="0 0 520 220" role="img" aria-label="A small, cute robot reaches toward a soft yellow strip where short clips drift past: a ball rolling down a slope and bouncing, a ball rolling behind a box, a swinging pendulum, a ball dropping off a table.">
+                    <defs>
+                        <linearGradient id="fadeGrad" gradientUnits="userSpaceOnUse" x1="140" y1="0" x2="520" y2="0">
+                            <stop offset="0" stop-color="#000"/><stop offset=".22" stop-color="#fff"/>
+                            <stop offset=".72" stop-color="#fff"/><stop offset="1" stop-color="#000"/>
+                        </linearGradient>
+                        <mask id="fade" maskUnits="userSpaceOnUse" x="0" y="0" width="520" height="220"><rect x="140" y="0" width="380" height="220" fill="url(#fadeGrad)"/></mask>
+                        <filter id="soft" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+                    </defs>
+                    <g mask="url(#fade)">
+                        <rect class="band" x="140" y="40" width="380" height="100" rx="34" filter="url(#soft)"/>
+                        <g class="strip"><g class="clip" transform="translate(160 58)"><rect class="fr" width="100" height="64" rx="4"/><line class="ln" x1="6" y1="18" x2="58" y2="50"/><line class="ln soft" x1="4" y1="58" x2="96" y2="58"/><path class="ln" d="M58 50 L64 42 L70 58"/><circle class="ball" r="5"><animateMotion dur="2.6s" repeatCount="indefinite" calcMode="spline" keyPoints="0;0.42;1" keyTimes="0;0.5;1" keySplines=".5 0 .9 .6;.2 .5 .6 1" path="M10 12 L54 40 Q 70 4 86 53"/></circle></g><g class="clip" transform="translate(284 58)"><rect class="fr" width="100" height="64" rx="4"/><line class="ln soft" x1="4" y1="56" x2="96" y2="56"/><circle class="ball" r="5" cy="51"><animate attributeName="cx" values="6;94" dur="3.4s" repeatCount="indefinite"/></circle><rect class="box" x="44" y="28" width="24" height="28" rx="2"/></g><g class="clip" transform="translate(408 58)"><rect class="fr" width="100" height="64" rx="4"/><line class="ln" x1="34" y1="8" x2="66" y2="8"/><g><animateTransform attributeName="transform" type="rotate" values="-38 50 8;38 50 8;-38 50 8" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/><line class="ln" x1="50" y1="8" x2="50" y2="44"/><circle class="ball" cx="50" cy="49" r="5"/></g></g><g class="clip" transform="translate(532 58)"><rect class="fr" width="100" height="64" rx="4"/><path class="ln" d="M6 30 H50 M12 30 V58 M44 30 V58"/><line class="ln soft" x1="4" y1="58" x2="96" y2="58"/><circle class="ball" r="5"><animateMotion dur="2.8s" repeatCount="indefinite" calcMode="spline" keyPoints="0;0.45;1;1" keyTimes="0;0.45;0.8;1" keySplines=".4 0 .6 1;.5 0 1 .6;0 0 1 1" path="M12 25 L48 25 Q 66 25 74 53"/></circle></g><g class="clip" transform="translate(656 58)"><rect class="fr" width="100" height="64" rx="4"/><line class="ln" x1="6" y1="18" x2="58" y2="50"/><line class="ln soft" x1="4" y1="58" x2="96" y2="58"/><path class="ln" d="M58 50 L64 42 L70 58"/><circle class="ball" r="5"><animateMotion dur="2.6s" repeatCount="indefinite" calcMode="spline" keyPoints="0;0.42;1" keyTimes="0;0.5;1" keySplines=".5 0 .9 .6;.2 .5 .6 1" path="M10 12 L54 40 Q 70 4 86 53"/></circle></g><g class="clip" transform="translate(780 58)"><rect class="fr" width="100" height="64" rx="4"/><line class="ln soft" x1="4" y1="56" x2="96" y2="56"/><circle class="ball" r="5" cy="51"><animate attributeName="cx" values="6;94" dur="3.4s" repeatCount="indefinite"/></circle><rect class="box" x="44" y="28" width="24" height="28" rx="2"/></g><g class="clip" transform="translate(904 58)"><rect class="fr" width="100" height="64" rx="4"/><line class="ln" x1="34" y1="8" x2="66" y2="8"/><g><animateTransform attributeName="transform" type="rotate" values="-38 50 8;38 50 8;-38 50 8" dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/><line class="ln" x1="50" y1="8" x2="50" y2="44"/><circle class="ball" cx="50" cy="49" r="5"/></g></g><g class="clip" transform="translate(1028 58)"><rect class="fr" width="100" height="64" rx="4"/><path class="ln" d="M6 30 H50 M12 30 V58 M44 30 V58"/><line class="ln soft" x1="4" y1="58" x2="96" y2="58"/><circle class="ball" r="5"><animateMotion dur="2.8s" repeatCount="indefinite" calcMode="spline" keyPoints="0;0.45;1;1" keyTimes="0;0.45;0.8;1" keySplines=".4 0 .6 1;.5 0 1 .6;0 0 1 1" path="M12 25 L48 25 Q 66 25 74 53"/></circle></g></g>
+                    </g>
+                    <g class="bot">
+                        <path class="arm" d="M96 152 C 112 146 124 132 132 118"/><circle class="hand" cx="134" cy="115" r="6"/>
+                        <path class="arm" d="M98 166 C 118 164 134 150 144 134"/><circle class="hand" cx="146" cy="131" r="6"/>
+                        <line class="ln" x1="58" y1="190" x2="58" y2="202"/><line class="ln" x1="84" y1="190" x2="84" y2="202"/>
+                        <ellipse class="body" cx="56" cy="206" rx="9" ry="7"/><ellipse class="body" cx="86" cy="206" rx="9" ry="7"/>
+                        <rect class="body" x="44" y="140" width="56" height="52" rx="18"/>
+                        <rect class="tray" x="56" y="156" width="32" height="14" rx="5"/>
+                        <line class="ln" x1="71" y1="128" x2="71" y2="140"/>
+                        <line class="ln" x1="58" y1="58" x2="52" y2="44"/><circle class="tip" cx="51" cy="41" r="4"/>
+                        <path class="body" d="M24 102 C 22 72 46 56 72 56 C 102 56 122 74 120 100 C 118 122 98 132 72 132 C 44 132 26 124 24 102 Z"/>
+                        <path class="visor" d="M62 92 C 70 80 106 78 112 94 C 116 108 100 116 84 115 C 68 114 56 104 62 92 Z"/>
+                        <path class="eye" d="M78 99 Q 88 89 98 99"><animate attributeName="d" values="M78 99 Q 88 89 98 99;M78 99 Q 88 89 98 99;M78 98 Q 88 98 98 98;M78 99 Q 88 89 98 99" keyTimes="0;.9;.95;1" dur="5s" repeatCount="indefinite"/></path>
+                        <ellipse class="cheek" cx="104" cy="112" rx="5" ry="3"/>
                     </g>
                 </svg>
-                <figcaption><span class="fig-no">Fig. 0</span> The agent I want to build: it watches the world, understands what it sees, and knows what comes next — before it acts.</figcaption>
-            </figure>
+            </div>
         </div>
     </header>
 
@@ -218,5 +227,12 @@
     </footer>
 
 </main>
+<script>
+    // reduced motion: stop the clips inside the strip as well (SMIL ignores CSS)
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const art = document.querySelector('.hero-art');
+        if (art) { art.pauseAnimations(); art.setCurrentTime(1.1); }
+    }
+</script>
 </body>
 </html>
