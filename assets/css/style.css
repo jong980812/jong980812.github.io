@@ -39,10 +39,10 @@ b, strong { font-weight: 700; }
 /* ---------- Top bar ---------- */
 
 .topbar { border-bottom: 1px solid var(--line); }
-.topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-.brand { font: 700 18px var(--head); color: var(--ink); letter-spacing: -0.01em; }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.brand { font: 700 21px var(--head); color: var(--ink); letter-spacing: -0.01em; }
 .brand:hover { text-decoration: none; }
-.topbar nav { display: flex; gap: 22px; font-size: 15px; font-weight: 600; }
+.topbar nav { display: flex; gap: 28px; font-size: 16.5px; font-weight: 600; }
 .topbar nav a { color: var(--ink); }
 .topbar nav a.office { color: var(--accent); }
 
@@ -344,7 +344,7 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
     /* iPhone: heavier, darker body text (the 400 weight reads too thin on iOS) */
     body { font-weight: 500; color: #1C1916; }
     .wrap { padding: 0 16px; }
-    .topbar nav { gap: 12px; font-size: 14px; }
+    .topbar nav { gap: 16px; font-size: 15.5px; }
     .topbar .brand { display: none; }
     .topbar .wrap { justify-content: center; }
     .hero { grid-template-columns: 84px minmax(0, 1fr); column-gap: 14px; row-gap: 0; padding-top: 24px; }
