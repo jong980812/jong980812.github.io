@@ -210,7 +210,7 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 .hero-art .shell { fill: url(#shellGrad); stroke: #2B3340; stroke-width: 1.6; stroke-linejoin: round; }
 .hero-art .joint { fill: #C9D1DC; stroke: #2B3340; stroke-width: 1.4; }
 .hero-art .wheel { fill: #2B3340; }
-.hero-art .shadow { fill: #1C2430; opacity: .1; filter: url(#blur2); }
+.hero-art .shadow { fill: #3A3020; opacity: .12; filter: url(#blur2); }
 .hero-art .shelf { fill: #DCE3EC; stroke: #2B3340; stroke-width: 1.2; }
 .hero-art .cup { fill: #FFFFFF; stroke: #2B3340; stroke-width: 1.2; stroke-linejoin: round; }
 .hero-art .steam { fill: none; stroke: #AAB3C0; stroke-width: 1.1; stroke-linecap: round; }
@@ -236,22 +236,23 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
     .hero-art .strip { animation: none; }
 }
 
-/* v.bot style robot: one cream body, thick ink outline, black face screen */
-.hero-art .vb-body { fill: #F4EEDD; stroke: #2B2723; stroke-width: 3; stroke-linejoin: round; }
-.hero-art .vb-shine { fill: none; stroke: #fff; stroke-width: 3; stroke-linecap: round; opacity: .8; }
-.hero-art .vb-wheel { fill: #2B2723; }
-.hero-art .vb-arm { fill: none; stroke: #3A3631; stroke-width: 7.5; stroke-linecap: round; }
-.hero-art .bot .screen { fill: #1F1C19; stroke: #2B2723; stroke-width: 1.5; }
-.hero-art .vb-eye { fill: #F6F1E5; }
-.hero-art .vb-wink { fill: none; stroke: #F6F1E5; stroke-width: 2.4; stroke-linecap: round; opacity: 0; }
-.hero-art .bot.wink .vb-eye.open { opacity: 0; }
-.hero-art .bot.wink .vb-wink { opacity: 1; }
-.hero-art .vb-mouth { fill: none; stroke: #F6F1E5; stroke-width: 2.4; stroke-linecap: round; }
-.hero-art .vb-hub { fill: #CFC6B4; }
-.hero-art .vb-hand { fill: #F4EEDD; stroke: #2B2723; stroke-width: 2.4; }
-.hero-art .vb-stalk { stroke: #2B2723; stroke-width: 2.4; stroke-linecap: round; }
+/* round floating robot: seen from behind while it watches the strip, turns around when clicked */
+.hero-art .v2 { fill: url(#shell2); stroke: #BDB3A1; stroke-width: 1.3; }
+.hero-art .gloss2 { fill: #fff; opacity: .9; }
+.hero-art .seam2 { fill: none; stroke: #CFC8B9; stroke-width: 1.4; }
 .hero-art .vb-light { fill: var(--accent); }
-.hero-art .vb-seam { fill: none; stroke: #2B2723; stroke-width: 1.4; opacity: .3; }
+.hero-art .glow2 { fill: url(#beam2); }
+.hero-art .bot .screen { fill: url(#face2); }
+.hero-art .eye2 { fill: url(#scan2); }
+.hero-art .mouth2 { fill: #F3F1EC; }
+.hero-art .front2 { opacity: 0; transition: opacity .25s; }
+.hero-art .back2 { transition: opacity .25s; }
+.hero-art .bot.turn .front2 { opacity: 1; }
+.hero-art .bot.turn .back2, .hero-art .bot.turn .glow2 { opacity: 0; }
+.hero-art .glow2 { transition: opacity .25s; }
+.hero-art .float { animation: float2 4.5s ease-in-out infinite; }
+@keyframes float2 { 50% { transform: translateY(-4px); } }
+@media (prefers-reduced-motion: reduce) { .hero-art .float { animation: none; } }
 
 /* interaction: hover a clip, click the robot */
 .hero-art .clip { cursor: default; }
