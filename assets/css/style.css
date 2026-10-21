@@ -290,33 +290,32 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
     position: absolute;
     z-index: 2;
     margin: 0;
-    padding: 7px 12px;
+    padding: 10px 15px;
     width: max-content;
-    max-width: 210px;
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(60, 48, 30, .08);
-    font: 500 12.5px/1.4 var(--mono);
+    max-width: 200px;
+    background: #fff;
+    border: 1.6px solid #3A3631;
+    border-radius: 22px;
+    box-shadow: 0 6px 18px rgba(60, 48, 30, .12);
+    font: italic 500 13.5px/1.4 var(--mono);
     color: var(--ink);
     opacity: 0;
     transition: opacity .18s;
     pointer-events: none;
 }
 
-/* thought-bubble trail toward the robot's head */
+/* thought-bubble trail: two circles shrinking toward the robot's head */
 .agent-say::before, .agent-say::after {
     content: "";
     position: absolute;
-    background: var(--panel);
-    border: 1px solid var(--line);
+    background: #fff;
+    border: 1.6px solid #3A3631;
     border-radius: 50%;
 }
-.agent-say::before { width: 9px; height: 9px; left: -12px; top: 22px; }
-.agent-say::after { width: 5px; height: 5px; left: -20px; top: 32px; }
-
-.agent-say.above::before { left: calc(50% - 4px); top: auto; bottom: -11px; }
-.agent-say.above::after { left: calc(50% + 2px); top: auto; bottom: -19px; }
+.agent-say::before { width: 12px; height: 12px; left: -17px; bottom: 2px; }
+.agent-say::after { width: 7px; height: 7px; left: -28px; bottom: -8px; }
+.agent-say.above::before { left: calc(50% - 6px); bottom: -17px; }
+.agent-say.above::after { left: calc(50% - 14px); bottom: -28px; }
 .agent-say.show { opacity: 1; }
 
 
