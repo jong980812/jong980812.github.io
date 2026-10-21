@@ -84,6 +84,13 @@ strong, b { color: var(--ink); font-weight: 600; }
 .links { margin-top: 18px; color: var(--ink-faint); }
 .links a { font-weight: 500; }
 
+.email {
+    margin: -8px 0 0;
+    font-size: 14.5px;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+}
+
 .photo {
     width: 190px;
     height: 190px;
