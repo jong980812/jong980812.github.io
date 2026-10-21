@@ -347,7 +347,15 @@ footer {
 .hero-art .ln.soft { stroke: #B9C0CB; stroke-width: 1.2; }
 .hero-art .ball { fill: #E5533D; }
 .hero-art .box { fill: #EFE6D2; stroke: var(--ink); stroke-width: 1.4; }
-.hero-art .fr { fill: var(--panel); stroke: var(--ink); stroke-width: 1.4; }
+.hero-art .fr { fill: var(--panel); }
+.hero-art .fr-edge { fill: none; stroke: var(--ink); stroke-width: 1.4; }
+.hero-art .mtn { fill: #DCE3EC; }
+.hero-art .leaf { fill: #B9CFAE; stroke: var(--ink); stroke-width: 1.2; }
+.hero-art .car { fill: #6F8FD6; stroke: var(--ink); stroke-width: 1.2; stroke-linejoin: round; }
+.hero-art .wheel-s { fill: var(--ink); }
+.hero-art .head-s { fill: var(--panel); stroke: var(--ink); stroke-width: 1.4; }
+.hero-art .sun { fill: #FFD98A; }
+.hero-art .cloud { fill: #fff; stroke: #B9C0CB; stroke-width: 1; }
 .hero-art .band { fill: #FFF0B3; }
 
 .hero-art .shell { fill: url(#shellGrad); stroke: #2B3340; stroke-width: 1.6; stroke-linejoin: round; }
@@ -372,8 +380,8 @@ footer {
 .hero-art .name { fill: var(--muted); font: 500 11px 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .02em; }
 
 /* the strip drifts slowly to the left, forever */
-.hero-art .strip { animation: drift 44s linear infinite; }
-@keyframes drift { to { transform: translateX(-496px); } }
+.hero-art .strip { animation: drift 88s linear infinite; }
+@keyframes drift { to { transform: translateX(-992px); } }
 
 @media (prefers-reduced-motion: reduce) {
     .hero-art .strip { animation: none; }
