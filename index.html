@@ -48,7 +48,7 @@
             </p>
         </div>
         <div class="art-dock">
-            <svg class="hero-art" viewBox="0 0 380 326" role="img" aria-label="A small, cute robot named Video Agent looks up at a soft yellow strip of short everyday clips drifting past: a ball bouncing down a slope, a car, a person walking, a ball behind a box, a bird, a pendulum, two people tossing a ball, a ball falling off a table.">
+            <svg class="hero-art" viewBox="0 0 380 344" role="img" aria-label="A small, cute robot named Video Agent looks up at a soft yellow strip of short everyday clips drifting past: a ball bouncing down a slope, a car, a person walking, a ball behind a box, a bird, a pendulum, two people tossing a ball, a ball falling off a table.">
                 <defs>
                         <linearGradient id="shellGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E9F0"/></linearGradient>
                         <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A3650"/><stop offset="1" stop-color="#121822"/></linearGradient>
@@ -65,7 +65,7 @@
                     <linearGradient id="gazeL" gradientUnits="userSpaceOnUse" x1="185" y1="180" x2="120" y2="124"><stop offset="0" stop-color="#7E9C8A" stop-opacity=".8"/><stop offset="1" stop-color="#7E9C8A" stop-opacity=".3"/></linearGradient>
                     <linearGradient id="gazeR" gradientUnits="userSpaceOnUse" x1="191" y1="180" x2="282" y2="124"><stop offset="0" stop-color="#7E9C8A" stop-opacity=".8"/><stop offset="1" stop-color="#7E9C8A" stop-opacity=".3"/></linearGradient>
                 </defs>
-                <text class="name kn" x="190" y="14" text-anchor="middle">world knowledge</text>
+                <text class="name kn" x="190" y="15" text-anchor="middle">world knowledge</text>
                 <line class="gaze" x1="185" y1="180" x2="120" y2="124" stroke="url(#gazeL)"/>
                 <line class="gaze" x1="191" y1="180" x2="282" y2="124" stroke="url(#gazeR)"/>
                 <g mask="url(#fade)" clip-path="url(#bandClip)">
@@ -80,7 +80,8 @@
                             <pattern id="scan2" width="3" height="2.4" patternUnits="userSpaceOnUse"><rect width="3" height="1.5" fill="#F3F1EC"/></pattern>
                         </defs>
                         <ellipse class="shadow" cx="95" cy="214" rx="34" ry="5"/>
-                        <text class="name" x="95" y="238" text-anchor="middle">Video Agent</text>
+                        <text class="name" x="95" y="237" text-anchor="middle">Video Agent</text>
+                        <text class="hint" x="95" y="256" text-anchor="middle">click me!</text>
                         <g class="float">
                             <ellipse class="glow2" cx="100" cy="88" rx="44" ry="16"/>
                             <ellipse class="v2" cx="38" cy="166" rx="9" ry="17" transform="rotate(-28 38 166)"/>
@@ -276,10 +277,13 @@
             bot.setAttribute('role', 'button');
             bot.setAttribute('aria-label', 'Ask the Video Agent what happens next');
             let hide;
+            let greeted = false;
             const ask = () => {
                 const i = watching();
                 const r = bot.getBoundingClientRect();
-                say.textContent = NEXT[i];
+                // first time: it introduces itself; after that it predicts what comes next
+                say.textContent = greeted ? NEXT[i] : "Hi! I'm the agent Jongseo wants to build. I watch, understand, then predict.";
+                if (!greeted) { greeted = true; svg.classList.add('asked'); }
                 const f = bot.querySelector('.screen').getBoundingClientRect();
                 say.style.left = (Math.max(f.right, r.right - 6) + 8 + scrollX) + 'px';
                 say.style.top = (f.top + f.height / 2 + scrollY) + 'px';
