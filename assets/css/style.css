@@ -75,8 +75,8 @@ strong, b { color: var(--ink); font-weight: 600; }
 .intro-text p { margin-top: 0; }
 
 .intro .sub {
-    margin: 22px 0 6px;
-    font-size: 16px;
+    margin: 24px 0 6px;
+    font-size: 19px;
     font-weight: 600;
     color: var(--ink);
 }
