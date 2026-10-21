@@ -5,7 +5,7 @@
 :root {
     /* soft ivory palette: warm paper, gentle ink, one quiet sage accent */
     --bg: #FBF8F1;
-    --ink: #2E2A25;
+    --ink: #24201C;
     --muted: #2E2A25;
     --faint: #2E2A25;
     --line: #E6DFD2;
@@ -331,16 +331,24 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 }
 
 @media (max-width: 680px) {
+    /* iPhone: heavier, darker body text (the 400 weight reads too thin on iOS) */
+    body { font-weight: 500; color: #1C1916; }
     .wrap { padding: 0 16px; }
     .topbar nav { gap: 12px; font-size: 14px; }
     .topbar .brand { display: none; }
     .topbar .wrap { justify-content: center; }
-    .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 28px; }
-    .hero-side { display: grid; grid-template-columns: 110px 1fr; gap: 16px; align-items: start; order: 0; }
-    .portrait { width: 110px; height: 138px; grid-row: 1 / span 2; }
-    .hero-side .label, .hero-side .edu { grid-column: 2; }
-    .label { margin-top: 0; }
-    .hero h1 { font-size: 34px; }
+    .hero { grid-template-columns: 84px minmax(0, 1fr); column-gap: 14px; row-gap: 0; padding-top: 24px; }
+    .hero-side, .hero-main { display: contents; }
+    .portrait { grid-column: 1; grid-row: 1 / span 2; width: 84px; height: 105px; order: 0; }
+    .hero h1 { grid-column: 2; grid-row: 1; align-self: end; font-size: 30px; order: 1; }
+    .aff { grid-column: 2; grid-row: 2; align-self: start; margin: 6px 0 0; font-size: 14px; order: 2; }
+    .bio { grid-column: 1 / -1; order: 3; margin-top: 18px; font-size: 16.5px; }
+    .keywords { grid-column: 1 / -1; order: 4; margin-top: 0; }
+    .status { grid-column: 1 / -1; order: 5; }
+    .links { grid-column: 1 / -1; order: 6; }
+    .art-dock { grid-column: 1 / -1; order: 7; margin-top: 28px; justify-self: center; width: 100%; }
+    .hero-side .label { grid-column: 1 / -1; order: 8; margin-top: 28px; }
+    .edu { grid-column: 1 / -1; order: 9; display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
     .ri-row { grid-template-columns: 1fr; gap: 10px; }
     .sec-head { flex-direction: column; align-items: flex-start; gap: 8px; }
     .pub { grid-template-columns: 1fr; gap: 10px; }
