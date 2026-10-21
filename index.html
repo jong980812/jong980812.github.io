@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<div class="scrubber" aria-label="Page progress">
+    <span class="name">Jongseo Lee</span>
+    <span class="play" aria-hidden="true"></span>
+    <div class="track" id="track"><div class="fill" id="fill"></div><div class="head" id="head"></div></div>
+    <span class="time" id="time">00:00 / 00:00</span>
+</div>
+
 <main class="page">
 
     <!-- Header -->
@@ -37,7 +44,10 @@
                 <a href="https://jong980812.github.io/walk-in-homepage/">3D Office</a>
             </p>
         </div>
-        <img class="photo" src="assets/img/profile.jpg" alt="Portrait of Jongseo Lee">
+        <div class="frame">
+            <img class="photo" src="assets/img/profile.jpg" alt="Portrait of Jongseo Lee">
+            <span class="tc">REC</span>
+        </div>
     </header>
 
     <!-- News -->
@@ -197,5 +207,44 @@
     </footer>
 
 </main>
+
+<script>
+    // Top scrubber: page scroll shown as video playback; sections are chapter marks.
+    (function () {
+        const track = document.getElementById('track'), fill = document.getElementById('fill'),
+              head = document.getElementById('head'), time = document.getElementById('time');
+        const chapters = [['Intro', document.querySelector('.intro')]].concat(
+            [...document.querySelectorAll('section')].map(s => [s.querySelector('h2').textContent, s]));
+        const fmt = t => String(Math.floor(t / 60)).padStart(2, '0') + ':' + String(Math.floor(t % 60)).padStart(2, '0');
+        const max = () => Math.max(1, document.documentElement.scrollHeight - innerHeight);
+        const secs = () => Math.round(max() / 40);   // 40px of scroll = 1 "second"
+
+        function marks() {
+            track.querySelectorAll('.chapter').forEach(m => m.remove());
+            chapters.forEach(([label, el]) => {
+                const b = document.createElement('button');
+                b.className = 'chapter';
+                b.setAttribute('aria-label', 'Jump to ' + label);
+                b.style.left = Math.min(100, (el.offsetTop - 56) / max() * 100) + '%';
+                b.innerHTML = '<span>' + label + '</span>';
+                b.onclick = e => { e.stopPropagation(); el.scrollIntoView({ behavior: 'smooth' }); };
+                track.appendChild(b);
+            });
+        }
+        function update() {
+            const r = Math.min(1, scrollY / max());
+            fill.style.width = head.style.left = (r * 100) + '%';
+            time.textContent = fmt(r * secs()) + ' / ' + fmt(secs());
+        }
+        track.addEventListener('click', e => {
+            const b = track.getBoundingClientRect();
+            scrollTo({ top: (e.clientX - b.left) / b.width * max(), behavior: 'smooth' });
+        });
+        addEventListener('scroll', update, { passive: true });
+        addEventListener('resize', () => { marks(); update(); });
+        addEventListener('load', () => { marks(); update(); });
+        marks(); update();
+    })();
+</script>
 </body>
 </html>
