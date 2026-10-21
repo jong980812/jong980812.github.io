@@ -365,8 +365,8 @@ footer {
 .hero-art .gloss { fill: #fff; opacity: .85; }
 .hero-art .screen { fill: url(#screenGrad); stroke: #2B3340; stroke-width: 1.2; }
 .hero-art .screen-gloss { fill: #fff; opacity: .09; }
-.hero-art .eye { fill: none; stroke: #9AD6FF; stroke-width: 4.4; stroke-linecap: round; }
-.hero-art .eye-glow { fill: none; stroke: #4FA8FF; stroke-width: 7; stroke-linecap: round; opacity: .55; filter: url(#glow); }
+.hero-art .eye { fill: #A6DBFF; }
+.hero-art .eye-glow { fill: #4FA8FF; opacity: .6; filter: url(#glow); }
 .hero-art .cheek { fill: #FF9C9C; opacity: .55; }
 
 /* the strip drifts slowly to the left, forever */
