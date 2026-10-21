@@ -1,0 +1,226 @@
+/* Minimal academic homepage — single column, Barron-style layout.
+   Previous designs are kept in backup/. */
+
+:root {
+    --ink: #1f2328;
+    --ink-soft: #444c56;
+    --ink-faint: #8b949e;
+    --line: #e6e8eb;
+    --link: #1a5fb4;
+    --link-hover: #e8780c;
+    --award: #c0392b;
+    --accent-bg: #fff8e6;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: #fff;
+    color: var(--ink-soft);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 15.5px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); }
+
+strong, b { color: var(--ink); font-weight: 600; }
+
+.page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 56px 24px 40px;
+}
+
+/* ---------- Intro ---------- */
+
+.intro {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.intro-text { flex: 1; }
+
+.intro h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+}
+
+.role {
+    margin: 4px 0 12px;
+    color: var(--ink-faint);
+}
+
+.seeking {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 3px 12px;
+    border-radius: 999px;
+    background: var(--accent-bg);
+    border: 1px solid #f3dca5;
+    color: #8a5a00;
+    font-size: 13.5px;
+    font-weight: 600;
+}
+
+.intro-text p { margin-top: 0; }
+
+.intro .sub {
+    margin: 24px 0 6px;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.links { margin-top: 18px; color: var(--ink-faint); }
+.links a { font-weight: 500; }
+
+.photo {
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 8px;
+}
+
+/* ---------- Sections ---------- */
+
+section { margin-top: 44px; }
+
+h2 {
+    margin: 0 0 14px;
+    padding-bottom: 6px;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+}
+
+h3 {
+    margin: 32px 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.note {
+    margin: -6px 0 8px;
+    font-size: 13px;
+    color: var(--ink-faint);
+}
+
+.award { color: var(--award); font-weight: 600; }
+
+/* News / Education: date + one line */
+.news {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.news li {
+    display: flex;
+    gap: 18px;
+    padding: 1px 0;
+    line-height: 1.55;
+}
+
+.news .date {
+    flex-shrink: 0;
+    width: 100px;
+    white-space: nowrap;
+    color: var(--ink);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Publications ---------- */
+
+.pub {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.pub + .pub { border-top: 1px solid var(--line); }
+
+.thumb {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.thumb img,
+.thumb video {
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.info p { margin: 2px 0 0; }
+
+.info .title {
+    display: block;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.45;
+    color: var(--ink);
+}
+
+.info a.title:hover { color: var(--link-hover); }
+
+.authors { font-size: 15.5px; }
+
+.venue { font-size: 15.5px; }
+
+.plinks { font-size: 15px; color: var(--ink-faint); }
+.muted { font-style: italic; }
+
+.compact {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.compact li {
+    padding: 6px 0;
+    font-size: 14.5px;
+}
+
+.compact li > a { font-weight: 500; }
+
+/* ---------- Footer ---------- */
+
+footer {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-faint);
+    text-align: center;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 720px) {
+    .page { padding: 32px 16px; }
+    .intro { flex-direction: column-reverse; align-items: center; gap: 20px; }
+    .photo { width: 150px; height: 150px; }
+    .pub { flex-direction: column; align-items: stretch; gap: 12px; }
+    .thumb { width: 100%; }
+    .thumb img, .thumb video { max-height: 220px; }
+    .news li { flex-direction: column; gap: 0; }
+    .news .date { width: auto; }
+}
