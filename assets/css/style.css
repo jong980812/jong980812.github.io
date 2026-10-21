@@ -2,14 +2,19 @@
    Previous designs are kept in backup/. */
 
 :root {
-    --ink: #1f2328;
+    /* shared tokens (hero spec) */
+    --bg: #F3F5F8;
+    --ink: #141A22;
+    --muted: #4B5563;
+    --line: #D2D8E2;
+    --accent: #2F55C4;
+    --panel: #FFFFFF;
+    /* page */
     --ink-soft: #444c56;
     --ink-faint: #8b949e;
-    --line: #e6e8eb;
     --link: #1a5fb4;
     --link-hover: #e8780c;
     --award: #c0392b;
-    --accent-bg: #fff8e6;
 }
 
 * { box-sizing: border-box; }
@@ -18,7 +23,7 @@ html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
-    background: #fff;
+    background: var(--bg);
     color: var(--ink-soft);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 15.5px;
@@ -34,7 +39,7 @@ strong, b { color: var(--ink); font-weight: 600; }
 .page {
     max-width: 980px;
     margin: 0 auto;
-    padding: 56px 24px 40px;
+    padding: 8px 24px 40px;
 }
 
 /* ---------- Intro ---------- */
@@ -232,4 +237,199 @@ footer {
     .thumb img, .thumb video { max-height: 220px; }
     .news li { flex-direction: column; gap: 0; }
     .news .date { width: auto; }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 52px 24px 40px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 410px;
+    gap: 48px;
+    align-items: center;
+}
+
+.hero-id {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.hero-photo {
+    width: 96px;
+    height: 120px;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: center 18%;
+    background: var(--panel);
+    border: 1px solid var(--line);
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: 'Archivo', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+}
+
+.hero h1 .ko {
+    margin-left: 6px;
+    font-family: 'Inter', -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0;
+    color: var(--muted);
+}
+
+.hero-aff {
+    margin: 10px 0 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+}
+
+.hero-bio {
+    margin: 0 0 20px;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink);
+    max-width: 38em;
+}
+
+.hero-bio strong { font-weight: 600; }
+
+.hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 16px;
+    padding: 4px 12px;
+    background: var(--panel);
+    border: 1px solid var(--accent);
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.hero-status .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.hero-links {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+.hero a { color: var(--accent); }
+.hero a:hover { color: var(--ink); }
+.hero a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Figure: one illustration, the only moving thing on the page */
+.hero-figure {
+    margin: 0;
+    padding: 14px;
+    background: var(--panel);
+    border: 1px solid var(--ink);
+}
+
+.hero-svg { display: block; width: 100%; height: auto; }
+
+.hero-figure figcaption {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+.fig-no {
+    margin-right: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    color: var(--ink);
+}
+
+.hero-svg .floor { stroke: var(--line); stroke-width: 1; }
+
+.hero-svg .robot rect,
+.hero-svg .robot line { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.hero-svg .robot .chest { fill: var(--panel); stroke-width: 1.5; }
+.hero-svg .led { fill: var(--ink); }
+.hero-svg .led.on,
+.hero-svg .ant { fill: var(--accent); }
+.hero-svg .lens { fill: var(--ink); }
+.hero-svg .iris { fill: var(--accent); }
+.hero-svg .glint { fill: #fff; }
+
+.hero-svg .beam { fill: var(--accent); }
+.hero-svg .b1 { opacity: 0.06; }
+.hero-svg .b2 { opacity: 0.07; }
+
+.hero-svg .fr-box { fill: var(--panel); stroke: var(--ink); stroke-width: 1.5; transition: stroke .2s; }
+.hero-svg .next { opacity: 0.45; }
+.hero-svg .next .fr-box { stroke-dasharray: 5 4; }
+.hero-svg .dot { fill: none; stroke: var(--ink); stroke-width: 1.2; stroke-dasharray: 1.5 3; stroke-linecap: round; }
+.hero-svg .ghost { fill: none; stroke: var(--ink); stroke-width: 1.2; opacity: .5; }
+.hero-svg .solid { fill: var(--ink); }
+.hero-svg .gnd { stroke: var(--line); stroke-width: 1; }
+.hero-svg .stick { fill: none; stroke: var(--ink); stroke-width: 1.6; stroke-linecap: round; }
+.hero-svg .dir { fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.hero-svg .box { fill: #E3E8F0; stroke: var(--ink); stroke-width: 1.2; }
+.hero-svg .q { fill: var(--accent); font: 500 16px 'IBM Plex Mono', monospace; }
+.hero-svg .tag { fill: var(--muted); font: 400 10px 'IBM Plex Mono', monospace; }
+
+/* Motion: lens lights up and beam fades in once; frames pan forever */
+.hero-figure { --dur: 36s; }
+
+.hero-svg .iris  { animation: lens-on .3s ease-out .4s both; }
+.hero-svg .beam  { animation: beam-in .6s ease-out .7s both; }
+.hero-svg .frames { animation: pan var(--dur) linear 1.2s infinite; }
+.hero-svg .tag {
+    animation: focus var(--dur) linear infinite;
+    animation-delay: calc(1.2s - var(--k) * var(--dur));
+}
+
+@keyframes lens-on { from { fill: var(--line); } to { fill: var(--accent); } }
+@keyframes beam-in { from { opacity: 0; } }
+@keyframes pan { to { transform: translateX(-416px); } }
+/* bright while the frame crosses the middle of the beam, dim elsewhere */
+@keyframes focus {
+    0%, 17% { opacity: 1; }
+    22%, 95% { opacity: .35; }
+    100% { opacity: 1; }
+}
+
+.hero-figure:hover .frames,
+.hero-figure:hover .tag { animation-play-state: paused; }
+.hero-figure:hover .fr-box { stroke: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-svg .iris, .hero-svg .beam, .hero-svg .frames, .hero-svg .tag { animation: none; }
+}
+
+@media (max-width: 1024px) {
+    .hero-grid { grid-template-columns: minmax(0, 1fr) 360px; }
+}
+
+@media (max-width: 768px) {
+    .hero { padding: 40px 16px 40px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .hero-figure { width: 100%; max-width: 420px; margin: 0 auto; --dur: 30s; }
+    .hero h1 { font-size: 36px; }
+    .hero h1 .ko { display: block; margin: 4px 0 0; font-size: 18px; }
+    .hero-id { gap: 16px; }
+    .hero-photo { width: 80px; height: 100px; }
 }

@@ -7,44 +7,59 @@
     <title>Jongseo Lee | Research Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<main class="page">
-
-    <!-- Header -->
-    <header class="intro">
-        <div class="intro-text">
-            <h1>Jongseo Lee</h1>
-            <p class="email"><a href="mailto:jong980812@khu.ac.kr">jong980812@khu.ac.kr</a></p>
-            <p class="role">Post-Master Researcher ·
-                <a href="https://vll.khu.ac.kr" target="_blank" rel="noopener">Vision and Learning Lab</a>,
-                Kyung Hee University</p>
-            <p class="seeking">Seeking PhD positions in the U.S. — Fall 2027</p>
-
-            <p>I am a Post-Master Researcher at Kyung Hee University, advised by
-            <a href="https://sites.google.com/site/jchoivision/" target="_blank" rel="noopener">Prof. Jinwoo Choi</a>,
-            where I also completed my M.S. in Computer Science. Before that, I earned dual B.S. degrees in
-            Biomedical Engineering and Electronics Engineering.</p>
-
-            <h3 class="sub">Research Interests</h3>
-            <p>I want to understand <strong>how visual experience becomes knowledge of the world</strong> —
-            knowledge that still holds in situations a model has never seen. My work has moved from
-            <strong>interpretable, reliable video models</strong>, to the gap between what video-language
-            models represent and what they say, and now to <strong>video world models that know how the physical world works</strong>.
-            In the long run, I want this perceptual foundation to ground planning in agents.</p>
-
-            <p class="links">
-                <a href="mailto:jong980812@khu.ac.kr">Email</a> /
-                <a href="assets/Jongseo_Lee_CV.pdf" target="_blank" rel="noopener">CV</a> /
-                <a href="https://github.com/jong980812" target="_blank" rel="noopener">GitHub</a> /
-                <a href="https://www.linkedin.com/in/jongseo-lee-a551ab244/" target="_blank" rel="noopener">LinkedIn</a> /
-                <a href="https://jong980812.github.io/walk-in-homepage/">3D Office</a>
-            </p>
+    <header class="hero">
+        <div class="hero-grid">
+            <div class="hero-intro">
+                <div class="hero-id">
+                    <img class="hero-photo" src="assets/img/profile.jpg" alt="Portrait of Jongseo Lee" width="96" height="120">
+                    <div>
+                        <h1>Jongseo Lee <span class="ko" lang="ko">이종서</span></h1>
+                        <p class="hero-aff">Post-Master Researcher · <a href="https://vll.khu.ac.kr" target="_blank" rel="noopener">Vision and Learning Lab</a>, Kyung Hee University · advised by <a href="https://sites.google.com/site/jchoivision/" target="_blank" rel="noopener">Prof. Jinwoo Choi</a></p>
+                    </div>
+                </div>
+                <p class="hero-bio">I study <strong>how visual experience becomes knowledge of the world</strong>.
+                My work has moved from interpretable, reliable video models to <strong>video world models that know
+                how the physical world works</strong> — models that, I believe, should
+                <a href="main.pdf" target="_blank" rel="noopener">learn to perceive before they act</a>.</p>
+                <p class="hero-status"><span class="dot" aria-hidden="true"></span>Seeking PhD positions · US · Fall 2027</p>
+                <p class="hero-links">
+                    <a href="mailto:jong980812@khu.ac.kr">jong980812@khu.ac.kr</a> ·
+                    <a href="assets/Jongseo_Lee_CV.pdf" target="_blank" rel="noopener">CV</a> ·
+                    <a href="https://github.com/jong980812" target="_blank" rel="noopener">GitHub</a> ·
+                    <a href="https://www.linkedin.com/in/jongseo-lee-a551ab244/" target="_blank" rel="noopener">LinkedIn</a> ·
+                    <a href="https://scholar.google.com/citations?user=3bnATYQAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a> ·
+                    <a href="https://jong980812.github.io/walk-in-homepage/">3D Office ↗</a>
+                </p>
+            </div>
+            <figure class="hero-figure">
+                <svg class="hero-svg" viewBox="0 0 480 300" role="img" aria-label="A small robot projects a beam from its eye; everyday scenes pass through the beam, each labeled with what the robot understands, and a dashed frame marks its prediction of what comes next.">
+                    <defs><clipPath id="beam-clip"><rect x="114" y="0" width="366" height="300"/></clipPath></defs>
+                    <line class="floor" x1="16" y1="280" x2="480" y2="280"/>
+                    <polygon class="beam b1" points="102,122 480,20 480,230 102,134"/>
+                    <polygon class="beam b2" points="102,124 480,56 480,196 102,132"/>
+                    <g clip-path="url(#beam-clip)"><g class="frames"><g class="set"><g class="fr" transform="translate(150 118)"><rect class="fr-box" width="92" height="64" rx="3"/><path class="dot" d="M10 14 Q 48 2 70 48"/><circle class="ghost" cx="30" cy="9" r="4.5"/><circle class="solid" cx="70" cy="50" r="5.5"/><line class="gnd" x1="8" y1="57" x2="84" y2="57"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.322">falls</text></g><g class="fr" transform="translate(254 110)"><rect class="fr-box" width="92" height="64" rx="3"/><circle class="stick" cx="34" cy="15" r="5"/><path class="stick" d="M34 20 V38 M34 38 L26 53 M34 38 L42 53 M34 26 L26 34 M34 26 L43 31"/><path class="dir" d="M52 33 H74 M68 28 L74 33 L68 38"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.072">walks →</text></g><g class="fr" transform="translate(358 110)"><rect class="fr-box" width="92" height="64" rx="3"/><line class="dot" x1="10" y1="42" x2="40" y2="42"/><circle class="solid" cx="46" cy="42" r="6"/><rect class="box" x="50" y="18" width="30" height="38" rx="1.5"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.822">goes behind</text></g><g class="fr next" transform="translate(462 118)"><rect class="fr-box" width="92" height="64" rx="3"/><text class="q" x="46" y="38" text-anchor="middle">?</text><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.572">t+1</text></g></g><g class="set" transform="translate(416 0)"><g class="fr" transform="translate(150 118)"><rect class="fr-box" width="92" height="64" rx="3"/><path class="dot" d="M10 14 Q 48 2 70 48"/><circle class="ghost" cx="30" cy="9" r="4.5"/><circle class="solid" cx="70" cy="50" r="5.5"/><line class="gnd" x1="8" y1="57" x2="84" y2="57"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.322">falls</text></g><g class="fr" transform="translate(254 110)"><rect class="fr-box" width="92" height="64" rx="3"/><circle class="stick" cx="34" cy="15" r="5"/><path class="stick" d="M34 20 V38 M34 38 L26 53 M34 38 L42 53 M34 26 L26 34 M34 26 L43 31"/><path class="dir" d="M52 33 H74 M68 28 L74 33 L68 38"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.072">walks →</text></g><g class="fr" transform="translate(358 110)"><rect class="fr-box" width="92" height="64" rx="3"/><line class="dot" x1="10" y1="42" x2="40" y2="42"/><circle class="solid" cx="46" cy="42" r="6"/><rect class="box" x="50" y="18" width="30" height="38" rx="1.5"/><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.822">goes behind</text></g><g class="fr next" transform="translate(462 118)"><rect class="fr-box" width="92" height="64" rx="3"/><text class="q" x="46" y="38" text-anchor="middle">?</text><text class="tag" x="46.0" y="78" text-anchor="middle" style="--k:0.572">t+1</text></g></g></g></g>
+                    <g class="robot">
+                        <line x1="66" y1="96" x2="66" y2="76"/><circle class="ant" cx="66" cy="72" r="4"/>
+                        <rect x="16" y="180" width="14" height="56" rx="7"/><rect x="102" y="180" width="14" height="56" rx="7"/>
+                        <rect x="38" y="266" width="24" height="14" rx="4"/><rect x="70" y="266" width="24" height="14" rx="4"/>
+                        <rect x="30" y="172" width="72" height="96" rx="16"/>
+                        <rect x="58" y="162" width="16" height="10"/>
+                        <rect x="24" y="96" width="84" height="66" rx="14"/>
+                        <rect class="chest" x="46" y="192" width="40" height="22" rx="4"/>
+                        <circle class="led" cx="56" cy="203" r="3"/><circle class="led on" cx="66" cy="203" r="3"/><circle class="led" cx="76" cy="203" r="3"/>
+                        <circle class="lens" cx="84" cy="128" r="18"/><circle class="iris" cx="84" cy="128" r="9"/><circle class="glint" cx="88" cy="124" r="3"/>
+                    </g>
+                </svg>
+                <figcaption><span class="fig-no">Fig. 0</span> The agent I want to build: it watches the world, understands what it sees, and knows what comes next — before it acts.</figcaption>
+            </figure>
         </div>
-        <img class="photo" src="assets/img/profile.jpg" alt="Portrait of Jongseo Lee">
     </header>
+
+<main class="page">
 
     <!-- News -->
     <section id="news">
