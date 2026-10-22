@@ -46,6 +46,12 @@ b, strong { font-weight: 700; }
 .topbar nav a { color: var(--ink); }
 .topbar nav a.office { color: var(--accent); }
 
+/* footer visitor count */
+.visitors { display: inline-flex; align-items: center; gap: 7px; }
+.visitors[hidden] { display: none; }
+.visitors .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(95, 130, 112, .18); }
+.visitors b { font-family: var(--mono); font-weight: 500; }
+
 /* tiny sage door (the 3D office's front door) next to links into the office */
 a.office { display: inline-flex; align-items: center; gap: 6px; }
 .mini-door { width: 13px; height: 19px; flex: none; overflow: visible; perspective: 40px; }

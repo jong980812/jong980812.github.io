@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=20261022-1">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261022-2">
 </head>
 <body>
 
@@ -207,6 +207,7 @@
 <footer class="foot">
     <div class="wrap">
         <span>© 2026 Jongseo Lee · <a href="mailto:jong980812@khu.ac.kr">jong980812@khu.ac.kr</a></span>
+        <span class="visitors" id="visitors" hidden><span class="dot" aria-hidden="true"></span>You are visitor <b></b></span>
         <a class="office" href="https://jong980812.github.io/walk-in-homepage/"><svg class="mini-door" viewBox="0 0 14 20" aria-hidden="true"><rect class="md-frame" x=".75" y=".75" width="12.5" height="18.5" rx="1"/><g class="md-leaf"><rect x="2.5" y="2.5" width="9" height="16.75" rx=".6"/><circle class="md-knob" cx="9.6" cy="11" r=".9"/></g></svg>Visit my 3D office</a>
     </div>
 </footer>
@@ -390,6 +391,27 @@
             row.addEventListener('mouseenter', () => v.play().catch(() => {}));
             row.addEventListener('mouseleave', () => { v.pause(); v.currentTime = 0; });
         });
+    })();
+</script>
+<script>
+    // Visitor count in the footer. GitHub Pages has no server, so the number lives in Abacus
+    // (https://abacus.jasoncameron.dev), the same free counter the 3D office uses, under its own key.
+    // Each browser session counts once; local previews only read. If the API is down the line stays hidden.
+    (function () {
+        const el = document.getElementById('visitors');
+        const local = ['localhost', '127.0.0.1', ''].includes(location.hostname);
+        let seen = false;
+        try { seen = sessionStorage.getItem('home-counted') === '1'; } catch (e) {}
+        const action = local || seen ? 'get' : 'hit';
+        fetch(`https://abacus.jasoncameron.dev/${action}/jong980812-home/visits`)
+            .then(r => r.ok ? r.json() : null)
+            .then(d => {
+                if (!d || !Number.isFinite(d.value)) return;
+                if (action === 'hit') { try { sessionStorage.setItem('home-counted', '1'); } catch (e) {} }
+                el.querySelector('b').textContent = '#' + d.value.toLocaleString('en-US');
+                el.hidden = false;
+            })
+            .catch(() => {});
     })();
 </script>
 </body>
