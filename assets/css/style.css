@@ -3,16 +3,16 @@
    Previous designs are kept in backup/. */
 
 :root {
-    /* soft ivory palette: warm paper, gentle ink, one quiet sage accent */
-    --bg: #FBF8F1;
-    --ink: #24201C;
-    --muted: #2E2A25;
-    --faint: #2E2A25;
-    --line: #E6DFD2;
-    --line-soft: #EFE9DE;
-    --accent: #5F8270;
-    --panel: #FFFDF8;
-    --thumb: #F3EEE4;
+    /* cool paper palette: near-neutral white, deep ink, one sage-teal accent */
+    --bg: #F7F8F8;
+    --ink: #1E2328;
+    --muted: #2A2F35;
+    --faint: #2A2F35;
+    --line: #E2E5E7;
+    --line-soft: #ECEEEF;
+    --accent: #4A706A;
+    --panel: #FFFFFF;
+    --thumb: #F0F2F2;
     --head: 'Plus Jakarta Sans', 'Source Sans 3', sans-serif;
     --body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --mono: 'IBM Plex Mono', ui-monospace, monospace;
@@ -38,7 +38,10 @@ b, strong { font-weight: 700; }
 
 /* ---------- Top bar ---------- */
 
-.topbar { border-bottom: 1px solid var(--line); }
+.topbar { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+.topbar .wrap { position: relative; }
+/* "what comes next": small balls bounce through the bar, each drawing its predicted path ahead */
+.topbar .next { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; }
 .brand { font: 700 21px var(--head); color: var(--ink); letter-spacing: -0.01em; }
 .brand:hover { text-decoration: none; }
@@ -55,7 +58,7 @@ b, strong { font-weight: 700; }
 /* tiny sage door (the 3D office's front door) next to links into the office */
 a.office { display: inline-flex; align-items: center; gap: 6px; }
 .mini-door { width: 13px; height: 19px; flex: none; overflow: visible; perspective: 40px; }
-.mini-door .md-frame { fill: #FFFDF8; stroke: var(--ink); stroke-width: 1.3; }
+.mini-door .md-frame { fill: #FFFFFF; stroke: var(--ink); stroke-width: 1.3; }
 .mini-door .md-leaf rect { fill: #7A9886; }
 .mini-door .md-knob { fill: #C9A15A; }
 .mini-door .md-leaf { transform-box: fill-box; transform-origin: 0 50%; transition: transform .35s cubic-bezier(.22, .8, .24, 1); }
@@ -124,7 +127,7 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
     gap: 16px;
     margin-bottom: 18px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #CFC6B6;
+    border-bottom: 1px solid #CCD1D4;
 }
 
 .sec-head h2 { margin: 0; font: 700 25px var(--head); letter-spacing: -0.015em; }
@@ -182,7 +185,7 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 
 .pub h3 { margin: 0 0 4px; font: 700 17.5px/1.35 var(--head); letter-spacing: -0.01em; }
 .pub h3 a { color: var(--ink); }
-.pub-au { margin: 0 0 4px; font-size: 15px; color: #4A443D; }
+.pub-au { margin: 0 0 4px; font-size: 15px; color: #3E444B; }
 .pub-meta { margin: 0; font-size: 15px; color: var(--muted); }
 .venue { font-weight: 700; color: var(--ink); }
 .venue i { font-weight: 600; }
@@ -321,9 +324,9 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
     width: max-content;
     max-width: 200px;
     background: #fff;
-    border: 1.6px solid #3A3631;
+    border: 1.6px solid #2E3339;
     border-radius: 22px;
-    box-shadow: 0 6px 18px rgba(60, 48, 30, .12);
+    box-shadow: 0 6px 18px rgba(30, 35, 40, .12);
     font: italic 500 13.5px/1.4 var(--mono);
     color: var(--ink);
     opacity: 0;
@@ -336,7 +339,7 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
     content: "";
     position: absolute;
     background: #fff;
-    border: 1.6px solid #3A3631;
+    border: 1.6px solid #2E3339;
     border-radius: 50%;
 }
 .agent-say::before { width: 12px; height: 12px; left: -17px; bottom: 2px; }
@@ -358,7 +361,7 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 
 @media (max-width: 680px) {
     /* iPhone: heavier, darker body text (the 400 weight reads too thin on iOS) */
-    body { font-weight: 500; color: #1C1916; }
+    body { font-weight: 500; color: #1A1E23; }
     .wrap { padding: 0 16px; }
     .topbar nav { gap: 16px; font-size: 15.5px; }
     .topbar .brand { display: none; }
