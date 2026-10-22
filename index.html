@@ -8,18 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=20261022-3">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261022-4">
 </head>
 <body>
 
 <header class="topbar">
     <div class="wrap">
-        <a class="brand" href="#top">Jongseo Lee</a>
+        <a class="brand" href="#top" data-det="person 0.99">Jongseo Lee</a>
         <nav>
-            <a href="#news">News</a>
-            <a href="#publications">Publications</a>
-            <a href="assets/Jongseo_Lee_CV.pdf" target="_blank" rel="noopener">CV</a>
-            <a class="office" href="https://jong980812.github.io/walk-in-homepage/"><svg class="mini-door" viewBox="0 0 14 20" aria-hidden="true"><rect class="md-frame" x=".75" y=".75" width="12.5" height="18.5" rx="1"/><g class="md-leaf"><rect x="2.5" y="2.5" width="9" height="16.75" rx=".6"/><circle class="md-knob" cx="9.6" cy="11" r=".9"/></g></svg>3D Office</a>
+            <a href="#news" data-det="news 0.97">News</a>
+            <a href="#publications" data-det="papers 0.98">Publications</a>
+            <a href="assets/Jongseo_Lee_CV.pdf" target="_blank" rel="noopener" data-det="cv 0.96">CV</a>
+            <a class="office" data-det="door 0.94" href="https://jong980812.github.io/walk-in-homepage/"><svg class="mini-door" viewBox="0 0 14 20" aria-hidden="true"><rect class="md-frame" x=".75" y=".75" width="12.5" height="18.5" rx="1"/><g class="md-leaf"><rect x="2.5" y="2.5" width="9" height="16.75" rx=".6"/><circle class="md-knob" cx="9.6" cy="11" r=".9"/></g></svg>3D Office</a>
         </nav>
     </div>
 </header>
@@ -413,6 +413,32 @@
             })
             .catch(() => {});
     })();
+</script>
+<script>
+    // Top bar bottom edge as a video timeline: a playhead drifts along it and glides under the hovered link.
+    (function () {
+  const bar = document.querySelector('.topbar');
+  const tl = document.createElement('div'); tl.className = 'tl'; tl.setAttribute('aria-hidden', 'true');
+  tl.innerHTML = '<div class="ticks"></div><div class="fill"></div><div class="head"></div>';
+  bar.appendChild(tl);
+  const fill = tl.querySelector('.fill'), head = tl.querySelector('.head');
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let x = 0, target = null, last = performance.now();
+  bar.querySelectorAll('nav a, .brand').forEach(a => {
+    a.addEventListener('pointerenter', () => { const r = a.getBoundingClientRect(), b = bar.getBoundingClientRect(); target = r.left + r.width / 2 - b.left; });
+    a.addEventListener('pointerleave', () => { target = null; });
+  });
+  function frame(now) {
+    const dt = Math.min(now - last, 50); last = now;
+    const W = bar.clientWidth;
+    if (target !== null) x += (target - x) * Math.min(1, dt / 120);   // glide to the hovered link
+    else if (!still) x += W / 26000 * dt;                               // one pass every ~26 s
+    if (x > W) x = 0;
+    head.style.left = x + 'px'; fill.style.width = x + 'px';
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
 </script>
 </body>
 </html>

@@ -38,7 +38,7 @@ b, strong { font-weight: 700; }
 
 /* ---------- Top bar ---------- */
 
-.topbar { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+.topbar { position: relative; }
 .topbar .wrap { position: relative; }
 .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; }
 .brand { font: 700 21px var(--head); color: var(--ink); letter-spacing: -0.01em; }
@@ -46,6 +46,31 @@ b, strong { font-weight: 700; }
 .topbar nav { display: flex; gap: 28px; font-size: 16.5px; font-weight: 600; }
 .topbar nav a { color: var(--ink); }
 .topbar nav a.office { color: var(--accent); }
+
+/* top bar bottom edge as a video timeline: faint frame ticks, a sage playhead that drifts and glides under the hovered link */
+.tl { position: absolute; left: 0; right: 0; bottom: 0; height: 6px; pointer-events: none; }
+.tl::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--line); }
+.tl .ticks { position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
+  background: repeating-linear-gradient(90deg, rgba(30,35,40,.16) 0 1px, transparent 1px 28px); }
+.tl .fill { position: absolute; left: 0; bottom: 0; height: 1.5px; background: var(--accent); opacity: .55; width: 0; }
+.tl .head { position: absolute; bottom: -3px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(74,112,106,.16); }
+
+/* hover a link and it gets "detected": corner brackets and a small class-score label */
+.topbar nav a, .topbar .brand { position: relative; }
+.topbar nav a::before, .topbar .brand::before { content: ""; position: absolute; inset: -7px -9px; opacity: 0; transform: scale(1.12); transition: opacity .18s, transform .18s; pointer-events: none;
+  --c: var(--accent); --l: 7px; --w: 1.5px;
+  background:
+    linear-gradient(var(--c),var(--c)) 0 0/var(--l) var(--w), linear-gradient(var(--c),var(--c)) 0 0/var(--w) var(--l),
+    linear-gradient(var(--c),var(--c)) 100% 0/var(--l) var(--w), linear-gradient(var(--c),var(--c)) 100% 0/var(--w) var(--l),
+    linear-gradient(var(--c),var(--c)) 0 100%/var(--l) var(--w), linear-gradient(var(--c),var(--c)) 0 100%/var(--w) var(--l),
+    linear-gradient(var(--c),var(--c)) 100% 100%/var(--l) var(--w), linear-gradient(var(--c),var(--c)) 100% 100%/var(--w) var(--l);
+  background-repeat: no-repeat; }
+.topbar nav a::after, .topbar .brand::after { content: attr(data-det); position: absolute; left: -9px; top: -21px; padding: 0 4px; font: 500 10.5px/14px var(--mono); color: #fff; background: var(--accent); border-radius: 2px; white-space: nowrap; opacity: 0; transition: opacity .18s; pointer-events: none; }
+.topbar nav a:hover::before, .topbar .brand:hover::before, .topbar nav a:focus-visible::before { opacity: 1; transform: none; }
+.topbar nav a:hover::after, .topbar .brand:hover::after, .topbar nav a:focus-visible::after { opacity: 1; }
+.topbar nav a:hover, .topbar .brand:hover { text-decoration: none; }
+
+@media (hover: none) { .topbar nav a::before, .topbar nav a::after, .topbar .brand::before, .topbar .brand::after { display: none; } }
 
 /* footer visitor count */
 .visitors { display: inline-flex; align-items: center; gap: 7px; }
