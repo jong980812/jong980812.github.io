@@ -134,6 +134,8 @@ a.office:hover .md-leaf, a.office:focus-visible .md-leaf { transform: scaleX(.45
 .bio { margin: 0 0 14px; font-size: 17px; line-height: 1.6; color: var(--ink); max-width: 34em; }
 .status { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; font-weight: 700; color: var(--ink); }
 .status .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(95, 130, 112, .18); }
+.open { margin: -4px 0 14px 16px; font-style: italic; font-size: 15.5px; color: var(--ink); }
+.open a { color: var(--accent); font-weight: 600; }
 .links { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 15px; font-weight: 600; }
 .links a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
 .links a:hover { color: var(--accent); }
@@ -397,6 +399,7 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
     .bio { grid-column: 1 / -1; order: 3; margin-top: 18px; font-size: 16.5px; }
     .keywords { grid-column: 1 / -1; order: 4; margin-top: 0; }
     .status { grid-column: 1 / -1; order: 5; }
+    .open { grid-column: 1 / -1; order: 5; }
     .links { grid-column: 1 / -1; order: 6; }
     .art-dock { grid-column: 1 / -1; order: 7; margin-top: 24px; justify-self: center; width: 100%; max-width: 290px; }
     .hero-side .label { grid-column: 1 / -1; order: 8; margin-top: 28px; }
