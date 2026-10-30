@@ -229,8 +229,9 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 
 /* News */
 .news { list-style: none; margin: 0; padding: 0; }
-.news li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding: 4px 0; font-size: 16px; }
+.news li { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding: 4px 0; font-size: 16px; }
 .news time { font: 400 14px/1.75 var(--mono); color: var(--faint); }
+.edu-list time { color: var(--ink); white-space: nowrap; }
 .news li.latest time { color: var(--accent); font-weight: 500; }
 
 /* Footer */
@@ -402,8 +403,6 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
     .open { grid-column: 1 / -1; order: 5; }
     .links { grid-column: 1 / -1; order: 6; }
     .art-dock { grid-column: 1 / -1; order: 7; margin-top: 24px; justify-self: center; width: 100%; max-width: 290px; }
-    .hero-side .label { grid-column: 1 / -1; order: 8; margin-top: 28px; }
-    .edu { grid-column: 1 / -1; order: 9; display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
     .ri-row { grid-template-columns: 1fr; gap: 10px; }
     .sec-head { flex-direction: column; align-items: flex-start; gap: 8px; }
     .pub { grid-template-columns: 1fr; gap: 10px; }
