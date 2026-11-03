@@ -5,16 +5,17 @@
 :root {
     /* cool paper palette: near-neutral white, deep ink, one sage-teal accent */
     --bg: #F7F8F8;
-    --ink: #1E2328;
-    --muted: #2A2F35;
-    --faint: #2A2F35;
+    --ink: #15191D;
+    --muted: #23282D;
+    --faint: #3A4047;
     --line: #E2E5E7;
     --line-soft: #ECEEEF;
-    --accent: #4A706A;
+    --accent: #2F6158;
     --panel: #FFFFFF;
     --thumb: #F0F2F2;
-    --head: 'Plus Jakarta Sans', 'Source Sans 3', sans-serif;
-    --body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --head: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    /* system UI font (SF Pro on Apple): larger x-height, reads bigger than Source Sans at the same px */
+    --body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --mono: 'IBM Plex Mono', ui-monospace, monospace;
 }
 
@@ -25,16 +26,18 @@ body {
     margin: 0;
     background: var(--bg);
     color: var(--ink);
-    font: 400 16.5px/1.6 var(--body);
+    font: 400 17px/1.6 var(--body);
     -webkit-font-smoothing: antialiased;
 }
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.aff a, .bio a:not(.to-agent), .open a, .news a, .pub-meta a, .plain a { text-decoration: underline; text-decoration-color: rgba(47, 97, 88, .4); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.aff a:hover, .bio a:not(.to-agent):hover, .open a:hover, .news a:hover, .pub-meta a:hover, .plain a:hover { text-decoration-color: currentColor; }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 b, strong { font-weight: 700; }
 
-.wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 
 /* ---------- Top bar ---------- */
 
@@ -43,7 +46,7 @@ b, strong { font-weight: 700; }
 .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; }
 .brand { font: 700 21px var(--head); color: var(--ink); letter-spacing: -0.01em; }
 .brand:hover { text-decoration: none; }
-.topbar nav { display: flex; gap: 28px; font-size: 16.5px; font-weight: 600; }
+.topbar nav { display: flex; gap: 28px; font-size: 17px; font-weight: 600; }
 .topbar nav a { color: var(--ink); }
 .topbar nav a.office { color: var(--accent); }
 
@@ -118,7 +121,7 @@ a.office:hover .md-leaf, a.office:focus-visible .md-leaf { transform: scaleX(.45
 }
 
 .edu { list-style: none; margin: 0; padding: 0; }
-.edu li { margin-bottom: 10px; font-size: 13.5px; line-height: 1.35; color: var(--ink); }
+.edu li { margin-bottom: 10px; font-size: 15px; line-height: 1.35; color: var(--ink); }
 .edu b, .edu span { display: block; }
 .edu time { display: block; font: 400 11.5px var(--mono); color: var(--faint); }
 
@@ -130,13 +133,13 @@ a.office:hover .md-leaf, a.office:focus-visible .md-leaf { transform: scaleX(.45
 
 .hero h1 .ko { margin-left: 4px; font: 500 20px var(--body); letter-spacing: 0; color: var(--muted); }
 
-.aff { margin: 10px 0 14px; font-size: 15px; line-height: 1.55; color: var(--muted); }
-.bio { margin: 0 0 14px; font-size: 17px; line-height: 1.6; color: var(--ink); max-width: 34em; }
+.aff { margin: 10px 0 14px; font-size: 16.5px; line-height: 1.55; color: var(--muted); }
+.bio { margin: 0 0 14px; font-size: 18px; line-height: 1.6; color: var(--ink); max-width: 40em; }
 .status { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; font-weight: 700; color: var(--ink); }
 .status .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(95, 130, 112, .18); }
-.open { margin: -4px 0 14px 16px; font-style: italic; font-size: 15.5px; color: var(--ink); }
-.open a { color: var(--accent); font-weight: 600; }
-.links { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 15px; font-weight: 600; }
+.open { margin: -4px 0 14px 16px; font-style: italic; font-size: 16.5px; color: var(--ink); }
+.open a { color: var(--accent); font-weight: 600; white-space: nowrap; }
+.links { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 16.5px; font-weight: 600; }
 .links a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
 .links a:hover { color: var(--accent); }
 
@@ -175,13 +178,13 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 .ri.now { border-color: var(--accent); color: var(--accent); }
 
 /* Filters */
-.filters { display: flex; gap: 16px; font-size: 14px; }
+.filters { display: flex; gap: 16px; font-size: 15px; }
 .filters button {
     padding: 0 0 2px;
     background: none;
     border: 0;
     border-bottom: 2px solid transparent;
-    font: 400 14px var(--body);
+    font: 400 15px var(--body);
     color: var(--ink);
     cursor: pointer;
 }
@@ -208,35 +211,35 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 
 .pub-thumb img, .pub-thumb video { width: 100%; height: 100%; object-fit: contain; display: block; }
 
-.pub h3 { margin: 0 0 4px; font: 700 17.5px/1.35 var(--head); letter-spacing: -0.01em; }
+.pub h3 { margin: 0 0 4px; font: 700 18.5px/1.35 var(--head); letter-spacing: -0.01em; }
 .pub h3 a { color: var(--ink); }
-.pub-au { margin: 0 0 4px; font-size: 15px; color: #3E444B; }
-.pub-meta { margin: 0; font-size: 15px; color: var(--muted); }
+.pub-au { margin: 0 0 4px; font-size: 16.5px; color: var(--muted); }
+.pub-meta { margin: 0; font-size: 16.5px; color: var(--muted); }
 .venue { font-weight: 700; color: var(--ink); }
 .venue i { font-weight: 600; }
 .soon { font-style: italic; }
 
-.pub-note { margin: 10px 0 0; font-size: 13px; color: var(--faint); }
+.pub-note { margin: 10px 0 0; font-size: 14px; color: var(--faint); }
 
 .sub { margin: 28px 0 8px; font: 700 17px var(--head); }
 .plain { list-style: none; margin: 0; padding: 0; }
-.plain li { padding: 3px 0; font-size: 15px; color: var(--muted); }
+.plain li { padding: 3px 0; font-size: 16.5px; color: var(--muted); }
 
 .more { margin-top: 8px; }
-.more summary { cursor: pointer; font-size: 15px; font-weight: 600; color: var(--accent); list-style: none; }
+.more summary { cursor: pointer; font-size: 16.5px; font-weight: 600; color: var(--accent); list-style: none; }
 .more summary::-webkit-details-marker { display: none; }
 .more[open] summary { margin-bottom: 4px; }
 
 /* News */
 .news { list-style: none; margin: 0; padding: 0; }
-.news li { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding: 4px 0; font-size: 16px; }
-.news time { font: 400 14px/1.75 var(--mono); color: var(--faint); }
+.news li { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding: 4px 0; font-size: 17px; }
+.news time { font: 400 15px/1.75 var(--mono); color: var(--faint); }
 .edu-list time { color: var(--ink); white-space: nowrap; }
 .news li.latest time { color: var(--accent); font-weight: 500; }
 
 /* Footer */
 .foot { margin-top: 24px; border-top: 1px solid var(--line); }
-.foot .wrap { display: flex; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 32px; font-size: 14px; color: var(--muted); }
+.foot .wrap { display: flex; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 32px; font-size: 15px; color: var(--muted); }
 
 /* Illustration: floats on the page background, no frame */
 
@@ -393,8 +396,7 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 }
 
 @media (max-width: 680px) {
-    /* iPhone: heavier, darker body text (the 400 weight reads too thin on iOS) */
-    body { font-weight: 500; color: #1A1E23; }
+    body { font-size: 16.5px; }
     .wrap { padding: 0 16px; }
     .topbar nav { gap: 16px; font-size: 15.5px; }
     .topbar .brand { display: none; }
@@ -425,4 +427,3 @@ b, strong { font-variation-settings: "wght" 700; }
 .label, .hero h1 .ko, .news li.latest time, .hero-art .hint, .agent-say { font-variation-settings: "wght" 500; }
 .topbar nav, .links, .ri, .venue i, .more summary, .hero-art .name, .to-agent { font-variation-settings: "wght" 600; }
 .brand, .hero h1, .status, .sec-head h2, .filters button.on, .pub h3, .venue, .sub, .keywords em { font-variation-settings: "wght" 700; }
-@media (max-width: 680px) { body { font-variation-settings: "wght" 500; } }
