@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=20261103">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261103-2">
 </head>
 <body>
 
@@ -131,7 +131,7 @@
 
     <section id="news">
         <div class="sec-head"><h2>News</h2></div>
-        <ul class="news"><li class="latest"><time>2026.10</time><span>Selected as a Top Reviewer for <b>NeurIPS 2026</b>.</span></li><li><time>2026.09</time><span>Two papers accepted to <b>NeurIPS 2026</b>: <a href="https://hyuntak03.github.io/DeltaDirect/" target="_blank" rel="noopener">DeltaDirect</a> and <a href="https://leewooil.github.io/TraCE_project_page/" target="_blank" rel="noopener">TRACE</a>.</span></li><li><time>2025.11</time><span><a href="https://arxiv.org/abs/2503.23447" target="_blank" rel="noopener">CA²ST</a> accepted to <b>IEEE TPAMI</b>.</span></li><li><time>2025.09</time><span><a href="https://jong980812.github.io/DANCE/" target="_blank" rel="noopener">DANCE</a> accepted to <b>NeurIPS 2025</b> as a Spotlight (top 3.5%).</span></li><li><time>2025.07</time><span><a href="https://arxiv.org/abs/2508.10896" target="_blank" rel="noopener">ESSENTIAL</a> accepted to <b>ICCV 2025</b> as a Highlight.</span></li></ul>
+        <ul class="news"><li class="latest"><time>2026.10</time><span>Selected as a Top Reviewer for <b>NeurIPS 2026</b>.</span></li><li><time>2026.09</time><span>Two papers accepted to <b>NeurIPS 2026</b>: <a href="https://hyuntak03.github.io/DeltaDirect/" target="_blank" rel="noopener">DeltaDirect</a> and <a href="https://leewooil.github.io/TraCE_project_page/" target="_blank" rel="noopener">TRACE</a>.</span></li><li><time>2025.11</time><span><a href="https://arxiv.org/abs/2503.23447" target="_blank" rel="noopener">CA²ST</a> accepted to <b>IEEE TPAMI</b>.</span></li><li><time>2025.09</time><span><a href="https://jong980812.github.io/DANCE/" target="_blank" rel="noopener">DANCE</a> accepted to <b>NeurIPS 2025</b> as a <span class="award">Spotlight</span> (top 3.5%).</span></li><li><time>2025.07</time><span><a href="https://arxiv.org/abs/2508.10896" target="_blank" rel="noopener">ESSENTIAL</a> accepted to <b>ICCV 2025</b> as a <span class="award">Highlight</span>.</span></li></ul>
     </section>
 
     <section id="publications">
@@ -407,13 +407,21 @@
             document.querySelectorAll('.hero-art').forEach(svg => { svg.pauseAnimations(); svg.setCurrentTime(1.1); });
         }
 
-        // teaser videos play only on hover / focus
-        document.querySelectorAll('.pub').forEach(row => {
-            const v = row.querySelector('video');
-            if (!v) return;
-            row.addEventListener('mouseenter', () => v.play().catch(() => {}));
-            row.addEventListener('mouseleave', () => { v.pause(); v.currentTime = 0; });
-        });
+        // teaser videos autoplay (muted, looping) while on screen and pause when scrolled away;
+        // with reduced motion they play only on hover
+        const vids = [...document.querySelectorAll('.pub video')];
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+            vids.forEach(v => {
+                const row = v.closest('.pub');
+                row.addEventListener('mouseenter', () => v.play().catch(() => {}));
+                row.addEventListener('mouseleave', () => { v.pause(); v.currentTime = 0; });
+            });
+        } else {
+            const io = new IntersectionObserver(entries => entries.forEach(e => {
+                if (e.isIntersecting) e.target.play().catch(() => {}); else e.target.pause();
+            }), { threshold: 0.25 });
+            vids.forEach(v => io.observe(v));
+        }
     })();
 </script>
 <script>

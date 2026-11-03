@@ -216,7 +216,7 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 .pub-au { margin: 0 0 4px; font-size: 16.5px; color: var(--muted); }
 .pub-meta { margin: 0; font-size: 16.5px; color: var(--muted); }
 .venue { font-weight: 700; color: var(--ink); }
-.venue i { font-weight: 600; }
+.venue i, .award { font-weight: 700; font-style: italic; color: #C8372D; }  /* Spotlight / Highlight */
 .soon { font-style: italic; }
 
 .pub-note { margin: 10px 0 0; font-size: 14px; color: var(--faint); }
@@ -426,5 +426,5 @@ section { padding: 8px 0 36px; scroll-margin-top: 16px; }
 body { font-variation-settings: "wght" 400; }
 b, strong { font-variation-settings: "wght" 700; }
 .label, .hero h1 .ko, .news li.latest time, .hero-art .hint, .agent-say { font-variation-settings: "wght" 500; }
-.topbar nav, .links, .ri, .venue i, .more summary, .hero-art .name, .to-agent { font-variation-settings: "wght" 600; }
-.brand, .hero h1, .status, .sec-head h2, .filters button.on, .pub h3, .venue, .sub, .keywords em { font-variation-settings: "wght" 700; }
+.topbar nav, .links, .ri, .more summary, .hero-art .name, .to-agent { font-variation-settings: "wght" 600; }
+.brand, .hero h1, .status, .sec-head h2, .filters button.on, .pub h3, .venue, .venue i, .award, .sub, .keywords em { font-variation-settings: "wght" 700; }
